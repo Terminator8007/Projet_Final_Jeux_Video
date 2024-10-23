@@ -6,9 +6,14 @@ Le jeu consiste en un action rpg ressemblant aux jeux de la série Ys. Le person
 ## Concept utilisé
 
 ###  Autonomous agent
+Ce concept sert à faire en sorte que les ennemis puisse se déplacer tout seul.
 
 ###  Champs de vision
+Un champ de vision pour la détection du joueur par les ennemis
 
 ###  Spacial partition
+C'est un concept utilisé pour faire en sorte que la carte ne soit pas entièrement charger en permanence mais plûtot en parties autour du joueur.
+https://gameprogrammingpatterns.com/spatial-partition.html
 
 ###  Apparition de coffre
+Faire en sorte qu'un coffre apparaisse lorsqu'une certaine condition est rempli.
