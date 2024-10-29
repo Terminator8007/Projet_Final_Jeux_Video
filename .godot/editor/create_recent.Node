@@ -1,0 +1,14 @@
+VBoxContainer
+ScrollContainer
+OptionButton
+VSeparator
+HBoxContainer
+HSlider
+VSlider
+Label
+MarginContainer
+TabBar
+TabContainer
+Button
+AudioStreamPlayer2D
+Sprite2D

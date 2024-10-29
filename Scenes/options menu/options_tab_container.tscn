@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmxvllcuyntnp"]
+
+[ext_resource type="PackedScene" uid="uid://ctn17fxl6kr6n" path="res://Scenes/options menu/audio_slider_settings.tscn" id="1_hrjmq"]
+[ext_resource type="Script" path="res://Scenes/options menu/options_tab_container.gd" id="1_q6lrf"]
+[ext_resource type="PackedScene" uid="uid://c5k6si8r6rqw8" path="res://Scenes/options menu/window_mode_button.tscn" id="3_mm8i1"]
+[ext_resource type="PackedScene" uid="uid://b7da3uroplt5y" path="res://Scenes/options menu/resolution_mode_button.tscn" id="4_ueg2o"]
+
+[sub_resource type="SystemFont" id="SystemFont_blisv"]
+font_names = PackedStringArray("Papyrus")
+
+[node name="Options_Tab_Container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q6lrf")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_blisv")
+theme_override_font_sizes/font_size = 20
+tab_alignment = 1
+current_tab = 1
+
+[node name="Sons" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sons/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sons/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Audio_Slider_settings" parent="TabContainer/Sons/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_hrjmq")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Audio_Slider_settings2" parent="TabContainer/Sons/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_hrjmq")]
+layout_mode = 2
+bus_name = "Musique"
+
+[node name="Audio_Slider_settings3" parent="TabContainer/Sons/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_hrjmq")]
+layout_mode = 2
+bus_name = "Effets"
+
+[node name="Graphismes" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphismes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphismes/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphismes/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 128
+
+[node name="Window_Mode_Button" parent="TabContainer/Graphismes/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_mm8i1")]
+layout_mode = 2
+
+[node name="Resolution_Mode_Button" parent="TabContainer/Graphismes/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_ueg2o")]
+layout_mode = 2

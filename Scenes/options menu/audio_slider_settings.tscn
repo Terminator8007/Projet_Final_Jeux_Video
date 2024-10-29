@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctn17fxl6kr6n"]
+
+[ext_resource type="Script" path="res://Scenes/options menu/audio_slider_settings.gd" id="1_gxf4a"]
+
+[sub_resource type="SystemFont" id="SystemFont_fp7rl"]
+font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
+
+[node name="Audio_Slider_settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxf4a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 42
+
+[node name="Audio_Name _Lbl" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_fp7rl")
+theme_override_font_sizes/font_size = 32
+text = "Master"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Audio_Num _Lbl" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_fp7rl")
+theme_override_font_sizes/font_size = 32
+text = "99.2"

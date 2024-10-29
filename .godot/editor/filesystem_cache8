@@ -1,6 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729705614
+::res://::1730163576
+default_bus_layout.tres::AudioBusLayout::1999181247034465020::1730162296::0::1::::<><>::
 icon.svg::CompressedTexture2D::8232783160194719283::1729705614::1729705709::1::::<><>::
-README.md::TextFile::-1::1729705476::0::1::::<><>::
-::res://Scenes/::1729705449
-::res://Sprites/::1729705462
+README.md::TextFile::-1::1729707582::0::1::::<><>::
+::res://Assets/::1730147863
+credits Assets.txt::TextFile::-1::1730127001::0::1::::<><>::
+::res://Assets/images/::1730058151
+DALL·E 2024-10-27 15.04.25 - main menu background.jpg::CompressedTexture2D::8661532208045995215::1730058121::1730058151::1::::<><>::
+::res://Assets/musics/::1730132392
+main-theme02.ogg::AudioStreamOggVorbis::2742610219561871076::1730127283::1730132392::1::::<><>::
+::res://Assets/sfx/::1730147863
+::res://Assets/sprites_sheets/::1730054053
+Main_character_sprite_sheet.png::CompressedTexture2D::2030570852043217364::1729826410::1730054053::1::::<><>::
+::res://Scenes/::1730129461
+::res://Scenes/main character/::1730162408
+main_character.tscn::PackedScene::2987575269541179271::1730162408::0::1::::<><>::
+::res://Scenes/main menu/::1730162408
+main_menu.gd::GDScript::-1::1730131648::0::1::::MainMenu<>Control<>::
+main_menu.tscn::PackedScene::6587477498504628874::1730162408::0::1::::<><>::uid://dvnyf1ryhsvfr::::res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg<>res://Scenes/main menu/main_menu.gd<>uid://bfcsninpv2moq::::res://Assets/musics/main-theme02.ogg<>uid://djkhg0aitpf50::::res://Scenes/options menu/options_menu.tscn
+::res://Scenes/options menu/::1730163399
+audio_slider_settings.gd::GDScript::-1::1730162129::0::1::::<>Control<>::
+audio_slider_settings.tscn::PackedScene::6134902393217361359::1730162408::0::1::::<><>::res://Scenes/options menu/audio_slider_settings.gd
+options_menu.gd::GDScript::-1::1730131781::0::1::::OptionsMenu<>Control<>::
+options_menu.tscn::PackedScene::7812042468548210769::1730148096::0::1::::<><>::res://Scenes/options menu/options_menu.gd<>uid://bmxvllcuyntnp::::res://Scenes/options menu/options_tab_container.tscn
+options_tab_container.gd::GDScript::-1::1730163399::0::1::::OptionsTabContainer<>Control<>::
+options_tab_container.tscn::PackedScene::3277462778061688445::1730163399::0::1::::<><>::uid://ctn17fxl6kr6n::::res://Scenes/options menu/audio_slider_settings.tscn<>res://Scenes/options menu/options_tab_container.gd

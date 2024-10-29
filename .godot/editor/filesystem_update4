@@ -1,0 +1,13 @@
+res://Scenes/options menu/options_tab_container.tscn
+res://Scenes/main menu/main_menu.tscn
+res://Scenes/main character/main_character.tscn
+res://Scenes/options menu/audio_slider_settings.tscn
+res://Scenes/options menu/options_tab_container.gd
+res://Scenes/options menu/options_menu.gd
+res://Scenes/options menu/options_menu.tscn
+res://default_bus_layout.tres
+res://Scenes/options menu/resolution_mode_button.tscn
+res://Scenes/options menu/options_display_button.tscn
+res://Scenes/options menu/window_mode_button.tscn
+res://Scenes/options menu/window_mode_button.gd
+res://Scenes/options menu/resolution_mode_button.gd

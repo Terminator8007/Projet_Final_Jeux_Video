@@ -1,0 +1,6 @@
+sprite personnage principal par Pixeline:  https://pixeline-k.itch.io/character-spritesheet-32-px-walk-idle
+tileset par Pixeline: https://pixeline-k.itch.io/pixel-art-forest-asset-pack
+
+Fond d'écran menu principal Générer par ChatGPT utilisant DallE-3 et agrandi par Bigjpg : https://chatgpt.com https://bigjpg.com/
+
+Musiques par Youfulca: https://youfulca.com/music_assets/

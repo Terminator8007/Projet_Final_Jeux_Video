@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://c04a16rd2lgf7"]
+
+[ext_resource type="Texture2D" uid="uid://dvnyf1ryhsvfr" path="res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg" id="1_4yey3"]
+[ext_resource type="Script" path="res://Scenes/main menu/main_menu.gd" id="1_hvwvr"]
+[ext_resource type="AudioStream" uid="uid://bfcsninpv2moq" path="res://Assets/musics/main-theme02.ogg" id="3_8hj2w"]
+[ext_resource type="PackedScene" uid="uid://djkhg0aitpf50" path="res://Scenes/options menu/options_menu.tscn" id="3_v8jdg"]
+
+[sub_resource type="SystemFont" id="SystemFont_wh77g"]
+font_names = PackedStringArray("Papyrus")
+
+[sub_resource type="SystemFont" id="SystemFont_ifbra"]
+font_names = PackedStringArray("Papyrus")
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hvwvr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4yey3")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = SubResource("SystemFont_wh77g")
+theme_override_font_sizes/font_size = 64
+text = "The Oath of Astral Sword Tempest"
+horizontal_alignment = 1
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Play_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_ifbra")
+theme_override_font_sizes/font_size = 24
+text = "Jouer"
+
+[node name="Options_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_ifbra")
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="Quitter_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_ifbra")
+theme_override_font_sizes/font_size = 24
+text = "Quitter
+"
+
+[node name="Options_Menu" parent="." instance=ExtResource("3_v8jdg")]
+visible = false
+layout_mode = 1
+
+[node name="Main_Menu_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8hj2w")
+autoplay = true
+bus = &"Musique"
+parameters/looping = true
