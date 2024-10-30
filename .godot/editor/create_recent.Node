@@ -1,3 +1,9 @@
+Sprite2D
+Camera2D
+Node
+AnimationPlayer
+CollisionShape2D
+CharacterBody2D
 VBoxContainer
 ScrollContainer
 OptionButton
@@ -6,9 +12,3 @@ HBoxContainer
 HSlider
 VSlider
 Label
-MarginContainer
-TabBar
-TabContainer
-Button
-AudioStreamPlayer2D
-Sprite2D

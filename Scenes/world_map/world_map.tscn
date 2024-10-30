@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmgv2f7f43wne"]
+
+[ext_resource type="PackedScene" uid="uid://bitg6s866gu44" path="res://Scenes/main character/main_character.tscn" id="1_mkodx"]
+[ext_resource type="Texture2D" uid="uid://dpka0au20lvl8" path="res://icon.svg" id="2_lndg8"]
+
+[node name="world_map" type="Node2D"]
+
+[node name="Main_Character" parent="." instance=ExtResource("1_mkodx")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(198, 78)
+texture = ExtResource("2_lndg8")
