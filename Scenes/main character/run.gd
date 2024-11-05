@@ -4,7 +4,7 @@ class_name PlayerRun
 @export var player : Player
 var anim_player : AnimationPlayer
 
-@export var move_speed := 350.0
+@export var move_speed := 300.0
 @export var stop_speed := 2000.0
 
 func manage_input() -> Vector2:

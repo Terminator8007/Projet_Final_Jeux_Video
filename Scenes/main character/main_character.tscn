@@ -231,12 +231,13 @@ _data = {
 script = ExtResource("1_mea8v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -18)
 texture = ExtResource("2_hdcxk")
 hframes = 6
 vframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11)
+position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_a3ajm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -258,5 +259,6 @@ script = ExtResource("5_0ocx4")
 player = NodePath("../..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.2, 2.2)
+position = Vector2(0, -18)
+zoom = Vector2(2, 2)
 limit_smoothed = true

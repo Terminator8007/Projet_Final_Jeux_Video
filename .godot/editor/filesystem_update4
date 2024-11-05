@@ -1,4 +1,5 @@
+res://Scenes/world_map/world_map.tscn
+res://Scenes/test_shader/test_shader.gdshader
 res://Scenes/main menu/main_menu.tscn
 res://Scenes/main character/main_character.tscn
-res://Scenes/world_map/world_map.tscn
-res://Scenes/main character/run.gd
+res://Scenes/test_shader/test_shader.tscn

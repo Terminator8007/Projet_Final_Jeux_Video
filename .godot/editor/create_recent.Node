@@ -1,6 +1,9 @@
+Timer
+Node2D
+Node
+TileMapLayer
 Sprite2D
 Camera2D
-Node
 AnimationPlayer
 CollisionShape2D
 CharacterBody2D
@@ -10,5 +13,3 @@ OptionButton
 VSeparator
 HBoxContainer
 HSlider
-VSlider
-Label

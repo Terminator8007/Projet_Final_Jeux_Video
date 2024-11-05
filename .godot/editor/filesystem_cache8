@@ -1,42 +1,48 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730302445
-default_bus_layout.tres::AudioBusLayout::1999181247034465020::1730165001::0::1::::<><>::
-icon.svg::CompressedTexture2D::8232783160194719283::1729705614::1729705709::1::::<><>::
-README.md::TextFile::-1::1730171122::0::1::::<><>::
-::res://Assets/::1730226432
-credits Assets.txt::TextFile::-1::1730127001::0::1::::<><>::
-::res://Assets/images/::1730058151
-DALL·E 2024-10-27 15.04.25 - main menu background.jpg::CompressedTexture2D::8661532208045995215::1730058121::1730058151::1::::<><>::
-::res://Assets/musics/::1730132392
-main-theme02.ogg::AudioStreamOggVorbis::2742610219561871076::1730127283::1730132392::1::::<><>::
-::res://Assets/Scripts/::1730226644
-base_state.gd::GDScript::-1::1728482931::0::1::::BaseState<>Node<>::
-generic_character.gd::GDScript::-1::1728482931::0::1::::GenericCharacter<>CharacterBody2D<>::
-::res://Assets/sfx/::1730147863
-::res://Assets/sprites_sheets/::1730224012
-Main_character_sprite_sheet - Copie.png::CompressedTexture2D::5135499018411530873::1729826410::1730224012::1::::<><>::
-Main_character_sprite_sheet.png::CompressedTexture2D::2030570852043217364::1730223996::1730224012::1::::<><>::
-::res://Scenes/::1730241111
-::res://Scenes/main character/::1730260032
-idle.gd::GDScript::-1::1730255739::0::1::::PlayerIdle<>BaseState<>::
-main_character.gd::GDScript::-1::1730242212::0::1::::Player<>GenericCharacter<>::
-main_character.tscn::PackedScene::2987575269541179271::1730260032::0::1::::<><>::res://Scenes/main character/main_character.gd<>uid://36vg8jwne0d1::::res://Assets/sprites_sheets/Main_character_sprite_sheet.png<>res://Scenes/main character/state_machine.gd<>res://Scenes/main character/idle.gd<>res://Scenes/main character/run.gd
-run.gd::GDScript::-1::1730259978::0::1::::PlayerRun<>BaseState<>::
-state_machine.gd::GDScript::-1::1730255723::0::1::::<>Node<>::
-::res://Scenes/main menu/::1730260031
-main_menu.gd::GDScript::-1::1730241179::0::1::::MainMenu<>Control<>::
-main_menu.tscn::PackedScene::6587477498504628874::1730260031::0::1::::<><>::uid://dvnyf1ryhsvfr::::res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg<>res://Scenes/main menu/main_menu.gd<>uid://bfcsninpv2moq::::res://Assets/musics/main-theme02.ogg<>uid://djkhg0aitpf50::::res://Scenes/options menu/options_menu.tscn
-::res://Scenes/options menu/::1730170540
-audio_slider_settings.gd::GDScript::-1::1730162129::0::1::::<>Control<>::
-audio_slider_settings.tscn::PackedScene::6134902393217361359::1730169069::0::1::::<><>::res://Scenes/options menu/audio_slider_settings.gd
-options_display_button.tscn::PackedScene::1313268854057252192::1730170540::0::1::::<><>::
-options_menu.gd::GDScript::-1::1730165028::0::1::::OptionsMenu<>Control<>::
-options_menu.tscn::PackedScene::7812042468548210769::1730170467::0::1::::<><>::res://Scenes/options menu/options_menu.gd<>uid://bmxvllcuyntnp::::res://Scenes/options menu/options_tab_container.tscn
-options_tab_container.gd::GDScript::-1::1730164119::0::1::::OptionsTabContainer<>Control<>::
-options_tab_container.tscn::PackedScene::3277462778061688445::1730170467::0::1::::<><>::uid://ctn17fxl6kr6n::::res://Scenes/options menu/audio_slider_settings.tscn<>res://Scenes/options menu/options_tab_container.gd<>uid://c5k6si8r6rqw8::::res://Scenes/options menu/window_mode_button.tscn<>uid://b7da3uroplt5y::::res://Scenes/options menu/resolution_mode_button.tscn
-resolution_mode_button.gd::GDScript::-1::1730170540::0::1::::<>Control<>::
-resolution_mode_button.tscn::PackedScene::4638707892986928040::1730170467::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/resolution_mode_button.gd
-window_mode_button.gd::GDScript::-1::1730167959::0::1::::<>Control<>::
-window_mode_button.tscn::PackedScene::6901065297113682853::1730169068::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/window_mode_button.gd
-::res://Scenes/world_map/::1730260032
-world_map.tscn::PackedScene::8015238026861127654::1730260032::0::1::::<><>::uid://bitg6s866gu44::::res://Scenes/main character/main_character.tscn<>uid://dpka0au20lvl8::::res://icon.svg
+::res://::1730771358
+default_bus_layout.tres::AudioBusLayout::1999181247034465020::1730757211::0::1::::<><>::
+icon.svg::CompressedTexture2D::8232783160194719283::1729702014::1730614384::1::::<><>::
+README.md::TextFile::-1::1730167522::0::1::::<><>::
+::res://Assets/::1730299720
+credits Assets.txt::TextFile::-1::1730123401::0::1::::<><>::
+::res://Assets/images/::1730614394
+DALL·E 2024-10-27 15.04.25 - main menu background.jpg::CompressedTexture2D::8661532208045995215::1730054521::1730614394::1::::<><>::
+::res://Assets/musics/::1730614383
+main-theme02.ogg::AudioStreamOggVorbis::2742610219561871076::1730123683::1730614383::1::::<><>::
+::res://Assets/Scripts/::1730223044
+base_state.gd::GDScript::-1::1728479331::0::1::::BaseState<>Node<>::
+generic_character.gd::GDScript::-1::1728479331::0::1::::GenericCharacter<>CharacterBody2D<>::
+::res://Assets/sfx/::1730144263
+::res://Assets/sprites_sheets/::1730614384
+Main_character_sprite_sheet - Copie.png::CompressedTexture2D::5135499018411530873::1729822810::1730614384::1::::<><>::
+Main_character_sprite_sheet.png::CompressedTexture2D::2030570852043217364::1730220396::1730614384::1::::<><>::
+::res://Assets/Tileset/::1730614384
+Forest-Summer-Spring-spritesheet.png::CompressedTexture2D::925044701481690461::1730771265::1730771359::1::::<><>::
+::res://Scenes/::1730752861
+::res://Scenes/main character/::1730757614
+idle.gd::GDScript::-1::1730252139::0::1::::PlayerIdle<>BaseState<>::
+main_character.gd::GDScript::-1::1730238612::0::1::::Player<>GenericCharacter<>::
+main_character.tscn::PackedScene::2987575269541179271::1730757614::0::1::::<><>::res://Scenes/main character/main_character.gd<>uid://36vg8jwne0d1::::res://Assets/sprites_sheets/Main_character_sprite_sheet.png<>res://Scenes/main character/state_machine.gd<>res://Scenes/main character/idle.gd<>res://Scenes/main character/run.gd
+run.gd::GDScript::-1::1730672755::0::1::::PlayerRun<>BaseState<>::
+state_machine.gd::GDScript::-1::1730252123::0::1::::<>Node<>::
+::res://Scenes/main menu/::1730757614
+main_menu.gd::GDScript::-1::1730614534::0::1::::MainMenu<>Control<>::
+main_menu.tscn::PackedScene::6587477498504628874::1730757614::0::1::::<><>::uid://dvnyf1ryhsvfr::::res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg<>res://Scenes/main menu/main_menu.gd<>uid://bfcsninpv2moq::::res://Assets/musics/main-theme02.ogg<>uid://djkhg0aitpf50::::res://Scenes/options menu/options_menu.tscn
+::res://Scenes/options menu/::1730166940
+audio_slider_settings.gd::GDScript::-1::1730158529::0::1::::<>Control<>::
+audio_slider_settings.tscn::PackedScene::6134902393217361359::1730165469::0::1::::<><>::res://Scenes/options menu/audio_slider_settings.gd
+options_display_button.tscn::PackedScene::1313268854057252192::1730166940::0::1::::<><>::
+options_menu.gd::GDScript::-1::1730161428::0::1::::OptionsMenu<>Control<>::
+options_menu.tscn::PackedScene::7812042468548210769::1730166867::0::1::::<><>::res://Scenes/options menu/options_menu.gd<>uid://bmxvllcuyntnp::::res://Scenes/options menu/options_tab_container.tscn
+options_tab_container.gd::GDScript::-1::1730160519::0::1::::OptionsTabContainer<>Control<>::
+options_tab_container.tscn::PackedScene::3277462778061688445::1730166867::0::1::::<><>::uid://ctn17fxl6kr6n::::res://Scenes/options menu/audio_slider_settings.tscn<>res://Scenes/options menu/options_tab_container.gd<>uid://c5k6si8r6rqw8::::res://Scenes/options menu/window_mode_button.tscn<>uid://b7da3uroplt5y::::res://Scenes/options menu/resolution_mode_button.tscn
+resolution_mode_button.gd::GDScript::-1::1730166940::0::1::::<>Control<>::
+resolution_mode_button.tscn::PackedScene::4638707892986928040::1730166867::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/resolution_mode_button.gd
+window_mode_button.gd::GDScript::-1::1730164359::0::1::::<>Control<>::
+window_mode_button.tscn::PackedScene::6901065297113682853::1730165468::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/window_mode_button.gd
+::res://Scenes/test_shader/::1730757693
+test_shader.gd::GDScript::-1::1730756099::0::1::::<>Sprite2D<>::
+test_shader.gdshader::Shader::-1::1730757693::0::1::::<><>::
+test_shader.tscn::PackedScene::188186246710554657::1730757615::0::1::::<><>::res://Scenes/test_shader/test_shader.gdshader<>uid://dpka0au20lvl8::::res://icon.svg<>res://Scenes/test_shader/test_shader.gd
+::res://Scenes/world_map/::1730757614
+world_map.tscn::PackedScene::8015238026861127654::1730757614::0::1::::<><>::uid://bitg6s866gu44::::res://Scenes/main character/main_character.tscn<>uid://ngdl637oqhgv::::res://Assets/Tileset/Forest-Summer-Spring-spritesheet.png
