@@ -99,7 +99,7 @@ text = "Quitter
 visible = false
 layout_mode = 1
 
-[node name="Main_Menu_Music" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_8hj2w")
 autoplay = true
 bus = &"Musique"

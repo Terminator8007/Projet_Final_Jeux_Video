@@ -1,3 +1,5 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
 Timer
 Node2D
 Node
@@ -10,6 +12,3 @@ CharacterBody2D
 VBoxContainer
 ScrollContainer
 OptionButton
-VSeparator
-HBoxContainer
-HSlider
