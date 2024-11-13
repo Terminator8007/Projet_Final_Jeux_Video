@@ -6,10 +6,11 @@ var anim_player : AnimationPlayer
 
 @export var move_speed := 300.0
 @export var stop_speed := 2000.0
+var last_direction : Vector2 = Vector2.DOWN
 
 func manage_input() -> Vector2:
 	if Input.is_action_just_pressed("Bouton A"):
-		Transitioned.emit(self, "Attack")
+		Transitioned.emit(self, "Attaque1", last_direction)
 
 	# Obtient la direction d'entrée
 	var dir: Vector2 = Input.get_vector("Gauche", "Droite", "Haut", "Bas").normalized()
@@ -24,6 +25,7 @@ func manage_input() -> Vector2:
 
 		# Convertit l'angle quantifié en un vecteur
 		dir = Vector2(cos(eight_dir_angle), sin(eight_dir_angle))
+		last_direction = dir
 	
 	return dir
 	
@@ -39,13 +41,12 @@ func update(delta : float) -> void:
 	else :
 		player.velocity = player.velocity.move_toward(Vector2.ZERO, stop_speed * delta)
 	
-	if (player.velocity.length() == 0) :
-		Transitioned.emit(self, "Idle")
+	if player.velocity.length() == 0:
+		Transitioned.emit(self, "Idle", last_direction)
 	
 	player.direction = dir
 
 func physics_update(delta: float) -> void:
-	print(player.velocity)
 	if player.velocity.length() > 0:
 		# Vérifie si le mouvement est diagonal (x et y sont tous deux non nuls)
 		if player.velocity.x > 100 or player.velocity.x < -100:

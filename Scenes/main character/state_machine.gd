@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	if current_state:
 		current_state.physics_update(delta)
 
-func on_child_transition(state, new_state_name):
+func on_child_transition(state, new_state_name, last_dir = null):
 	if state != current_state:
 		return
 	
@@ -34,6 +34,10 @@ func on_child_transition(state, new_state_name):
 		
 	if current_state:
 		current_state.exit()
-		
-	new_state.enter()
+	
+	if new_state_name.to_lower() == "idle" or new_state_name.to_lower() == "attaque1" or new_state_name.to_lower() == "attaque2" or new_state_name.to_lower() == "attaque3":
+		new_state.enter(last_dir)
+	else:
+		new_state.enter()
+	
 	current_state = new_state
