@@ -12,8 +12,12 @@ func manage_input() -> void:
 	
 	if Input.is_action_just_pressed("Bouton A"):
 		Transitioned.emit(self, "Attaque1", last_direction)
+	if Input.is_action_just_pressed("Bouton B"):
+		Transitioned.emit(self, "AttaqueSpeciale", last_direction)
 
 func enter(direction = Vector2.DOWN) -> void:
+	print("idle")
+	print(last_direction)
 	last_direction = direction
 	anim_player = player.get_animation_player()
 	

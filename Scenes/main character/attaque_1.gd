@@ -20,6 +20,8 @@ func manage_input() -> void:
 		other_attack = true
 
 func enter(direction = Vector2.DOWN) -> void:
+	print("attaque1")
+	print(direction)
 	last_direction = direction
 	anim_player = player.get_animation_player()
 	sound_player = $"../../AttackSoundEffect"
@@ -81,7 +83,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 			damage_area_coliding = false
 			Transitioned.emit(self, "Idle", last_direction)
 
-func apply_knockback(target, direction):
+func apply_knockback_to_target(target, direction):
 	if target.has_method("apply_knockback"):
 		target.apply_knockback(direction * knockback_force)
 
@@ -89,7 +91,7 @@ func target_attacked(body: Node2D) -> void:
 	print(last_direction)
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
-		apply_knockback(body, last_direction)
+		apply_knockback_to_target(body, last_direction)
 
 
 func _on_area_2d_haut_body_entered(body: Node2D) -> void:

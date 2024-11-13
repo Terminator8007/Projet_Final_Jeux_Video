@@ -11,6 +11,10 @@ var last_direction : Vector2 = Vector2.DOWN
 func manage_input() -> Vector2:
 	if Input.is_action_just_pressed("Bouton A"):
 		Transitioned.emit(self, "Attaque1", last_direction)
+	if Input.is_action_just_pressed("Bouton B"):
+		print("run")
+		print(last_direction)
+		Transitioned.emit(self, "AttaqueSpeciale", last_direction)
 
 	# Obtient la direction d'entrée
 	var dir: Vector2 = Input.get_vector("Gauche", "Droite", "Haut", "Bas").normalized()

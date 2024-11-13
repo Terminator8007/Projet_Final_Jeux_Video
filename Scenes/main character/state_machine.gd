@@ -35,7 +35,9 @@ func on_child_transition(state, new_state_name, last_dir = null):
 	if current_state:
 		current_state.exit()
 	
-	if new_state_name.to_lower() == "idle" or new_state_name.to_lower() == "attaque1" or new_state_name.to_lower() == "attaque2" or new_state_name.to_lower() == "attaque3":
+	if new_state_name.to_lower() == "idle" or new_state_name.to_lower() == "attaque1" or new_state_name.to_lower() == "attaque2" or new_state_name.to_lower() == "attaque3" or new_state_name.to_lower() == "attaquespeciale":
+		print("stae machine")
+		print(last_dir)
 		new_state.enter(last_dir)
 	else:
 		new_state.enter()
