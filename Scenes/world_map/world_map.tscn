@@ -995,7 +995,22 @@ bus = &"Musique"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_h8k6c")]
 top_level = true
-position = Vector2(-536, 1084)
+position = Vector2(-682, 1123)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_h8k6c")]
-position = Vector2(-538, 1105)
+position = Vector2(-690, 1144)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("4_h8k6c")]
+position = Vector2(-715, 1151)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("4_h8k6c")]
+position = Vector2(-732, 1137)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("4_h8k6c")]
+position = Vector2(-737, 1116)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("4_h8k6c")]
+position = Vector2(-720, 1097)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("4_h8k6c")]
+position = Vector2(-695, 1098)

@@ -4,11 +4,11 @@ class_name PlayerAttaque3
 @export var player : Player
 var anim_player : AnimationPlayer
 var last_direction : Vector2 = Vector2.DOWN
-@export var push_force : float = 500.0
-@export var deceleration : float = 1200.0
+var push_force : float = 450.0
+var deceleration : float = 1200.0
 var current_push : float = 0.0
-@export var attack_damage : int = 10
-@export var knockback_force : float = 150.0
+var attack_damage : int
+var knockback_force : float = 400.0
 var damage_area_colider : CollisionShape2D
 var damage_area : Area2D
 var damage_area_coliding : bool = false
@@ -78,14 +78,15 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		
 
 func apply_knockback_to_target(target, direction):
-	# Applique un recul à l'ennemi en fonction de la direction de l'attaque
 	if target.has_method("apply_knockback"):
 		target.apply_knockback(direction * knockback_force)
 
 func target_attacked(body: Node2D) -> void:
 	if body.has_method("take_damage"):
-		body.take_damage(attack_damage)
-		apply_knockback_to_target(body, last_direction)
+		if body.is_invincible == false:
+			attack_damage = 20
+			body.take_damage(attack_damage)
+			apply_knockback_to_target(body, last_direction)
 
 func _on_area_2d_haut_body_entered(body: Node2D) -> void:
 	target_attacked(body)

@@ -12,9 +12,10 @@ func manage_input() -> Vector2:
 	if Input.is_action_just_pressed("Bouton A"):
 		Transitioned.emit(self, "Attaque1", last_direction)
 	if Input.is_action_just_pressed("Bouton B"):
-		print("run")
-		print(last_direction)
-		Transitioned.emit(self, "AttaqueSpeciale", last_direction)
+		if (player.special >= 40):
+			player.special -= 40
+			player.bar.special = player.special
+			Transitioned.emit(self, "AttaqueSpeciale", last_direction)
 
 	# Obtient la direction d'entrée
 	var dir: Vector2 = Input.get_vector("Gauche", "Droite", "Haut", "Bas").normalized()
@@ -51,15 +52,18 @@ func update(delta : float) -> void:
 	player.direction = dir
 
 func physics_update(delta: float) -> void:
-	if player.velocity.length() > 0:
-		# Vérifie si le mouvement est diagonal (x et y sont tous deux non nuls)
-		if player.velocity.x > 100 or player.velocity.x < -100:
-			anim_player.play("Run_Coter")
-			if (player.velocity.x > 0) :
-				player.sprite.flip_h = false
-			elif (player.velocity.x < 0) :
-				player.sprite.flip_h = true
-		elif player.velocity.y < 0:
-			anim_player.play("Run_Haut")
-		elif player.velocity.y > 0:
-			anim_player.play("Run_Bas")
+	if anim_player :
+		if player.velocity.length() > 0:
+			# Vérifie si le mouvement est diagonal (x et y sont tous deux non nuls)
+			if player.velocity.x > 100 or player.velocity.x < -100:
+				anim_player.play("Run_Coter")
+				if (player.velocity.x > 0) :
+					player.sprite.flip_h = false
+				elif (player.velocity.x < 0) :
+					player.sprite.flip_h = true
+			elif player.velocity.y < 0:
+				anim_player.play("Run_Haut")
+			elif player.velocity.y > 0:
+				anim_player.play("Run_Bas")
+	else:
+		return

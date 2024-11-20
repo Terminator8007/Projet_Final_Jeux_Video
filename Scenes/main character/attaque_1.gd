@@ -5,11 +5,11 @@ class_name PlayerAttaque1
 var anim_player : AnimationPlayer
 var last_direction : Vector2 = Vector2.DOWN
 var other_attack : bool = false
-@export var push_force : float = 450.0
+@export var push_force : float = 400.0
 @export var deceleration : float = 1200.0
 var current_push : float = 0.0
-@export var attack_damage : int = 10
-@export var knockback_force : float = 150.0
+var attack_damage : int
+var knockback_force : float = 400.0
 var damage_area_colider : CollisionShape2D
 var damage_area : Area2D
 var damage_area_coliding : bool = false
@@ -20,8 +20,6 @@ func manage_input() -> void:
 		other_attack = true
 
 func enter(direction = Vector2.DOWN) -> void:
-	print("attaque1")
-	print(direction)
 	last_direction = direction
 	anim_player = player.get_animation_player()
 	sound_player = $"../../AttackSoundEffect"
@@ -88,10 +86,11 @@ func apply_knockback_to_target(target, direction):
 		target.apply_knockback(direction * knockback_force)
 
 func target_attacked(body: Node2D) -> void:
-	print(last_direction)
 	if body.has_method("take_damage"):
-		body.take_damage(attack_damage)
-		apply_knockback_to_target(body, last_direction)
+		if body.is_invincible == false:
+			attack_damage = 10
+			body.take_damage(attack_damage)
+			apply_knockback_to_target(body, last_direction)
 
 
 func _on_area_2d_haut_body_entered(body: Node2D) -> void:

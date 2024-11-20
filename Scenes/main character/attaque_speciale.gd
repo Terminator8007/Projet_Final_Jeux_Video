@@ -7,8 +7,8 @@ var last_direction : Vector2 = Vector2.DOWN
 @export var push_force : float = 700.0
 @export var deceleration : float = 800.0
 var current_push : float = 0.0
-@export var attack_damage : int = 10
-@export var knockback_force : float = 150.0
+@export var attack_damage : int = 30
+@export var knockback_force : float = 500.0
 var damage_area_colider : CollisionShape2D
 var damage_area : Area2D
 var damage_area_coliding : bool = false
@@ -20,8 +20,6 @@ func manage_input() -> void:
 	pass
 
 func enter(direction = Vector2.DOWN) -> void:
-	print("attaque speciale")
-	print(direction)
 	last_direction = direction
 	anim_player = player.get_animation_player()
 	sound_player = $"../../AttackSepcSoundEffect"
@@ -60,15 +58,16 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		Transitioned.emit(self, "Idle", last_direction)
 		
 
-func apply_knockback_to_target(target, direction):
+func apply_knockback_to_target(target: Node2D, target_position: Vector2):
 	# Applique un recul à l'ennemi en fonction de la direction de l'attaque
+	var knockback_vector = (target_position - player.global_position).normalized() * knockback_force
 	if target.has_method("apply_knockback"):
-		target.apply_knockback(direction * knockback_force)
+		target.apply_knockback(knockback_vector)
 
 func target_attacked(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
-		apply_knockback_to_target(body, last_direction)
+		apply_knockback_to_target(body, body.global_position)
 
 
 func _on_area_2d_attaque_speciale_body_entered(body: Node2D) -> void:
