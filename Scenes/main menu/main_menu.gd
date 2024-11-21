@@ -11,7 +11,7 @@ extends Control
 
 func _ready():
 	handle_connecting_signals()
-	
+	start_button.grab_focus()
 
 func on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(start_level)
@@ -27,6 +27,7 @@ func on_exit_pressed() -> void:
 func on_exit_options_menu() -> void:
 	margin_container.visible = true
 	options_menu.visible = false
+	start_button.grab_focus()
 
 func handle_connecting_signals() -> void:
 	start_button.button_down.connect(on_start_pressed)

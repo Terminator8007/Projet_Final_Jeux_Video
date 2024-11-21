@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c04a16rd2lgf7"]
+[gd_scene load_steps=8 format=3 uid="uid://c04a16rd2lgf7"]
 
 [ext_resource type="Texture2D" uid="uid://dvnyf1ryhsvfr" path="res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg" id="1_4yey3"]
 [ext_resource type="Script" path="res://Scenes/main menu/main_menu.gd" id="1_hvwvr"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://djkhg0aitpf50" path="res://Scenes/options menu/options_menu.tscn" id="3_v8jdg"]
 
 [sub_resource type="SystemFont" id="SystemFont_wh77g"]
+font_names = PackedStringArray("Papyrus")
+
+[sub_resource type="SystemFont" id="SystemFont_wijj5"]
 font_names = PackedStringArray("Papyrus")
 
 [sub_resource type="SystemFont" id="SystemFont_ifbra"]
@@ -73,14 +76,17 @@ layout_mode = 2
 [node name="Play_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+focus_neighbor_top = NodePath("../Quitter_Button")
+focus_neighbor_bottom = NodePath("../Options_Button")
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = SubResource("SystemFont_ifbra")
+theme_override_fonts/font = SubResource("SystemFont_wijj5")
 theme_override_font_sizes/font_size = 24
 text = "Jouer"
 
 [node name="Options_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../Quitter_Button")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = SubResource("SystemFont_ifbra")
 theme_override_font_sizes/font_size = 24
@@ -89,6 +95,7 @@ text = "Options"
 [node name="Quitter_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../Play_Button")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = SubResource("SystemFont_ifbra")
 theme_override_font_sizes/font_size = 24

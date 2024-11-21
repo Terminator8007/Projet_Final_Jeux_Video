@@ -24,6 +24,7 @@ func init_health(_health) -> void:
 	health_bar_white.value = player.health
 
 func _set_special(new_special):
+	
 	special = min(special_bar.max_value, new_special)
 	special_bar.value = special
 	special_timer.start()

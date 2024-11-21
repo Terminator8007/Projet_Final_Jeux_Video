@@ -13,6 +13,7 @@ var damage_area_colider : CollisionShape2D
 var damage_area : Area2D
 var damage_area_coliding : bool = false
 var sound_player : AudioStreamPlayer
+@onready var special_timer : Timer = $"../../RegenSpecialTimer"
 
 func manage_input() -> void:
 	#if Input.is_action_just_pressed("Bouton A"):
@@ -33,6 +34,8 @@ func enter(direction = Vector2.DOWN) -> void:
 	damage_area = $"../../Area2DAttaqueSpeciale"
 	damage_area_colider = $"../../Area2DAttaqueSpeciale/CollisionShape2D"
 	damage_area_colider.disabled = false
+	player.is_special_regen = false
+	special_timer.stop()
 	
 func update(delta: float) -> void:
 	if not anim_player :
@@ -55,6 +58,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attaque_speciale":
 		damage_area_colider.disabled  = true
 		damage_area_coliding = false
+		special_timer.start()
 		Transitioned.emit(self, "Idle", last_direction)
 		
 
@@ -68,7 +72,6 @@ func target_attacked(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
 		apply_knockback_to_target(body, body.global_position)
-
 
 func _on_area_2d_attaque_speciale_body_entered(body: Node2D) -> void:
 	target_attacked(body)

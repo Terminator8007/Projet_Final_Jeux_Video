@@ -6,6 +6,9 @@ class_name Player
 @export var max_health : int = 256
 @export var max_special : int = 128
 @onready var bar : Control = $Control 
+var is_special_regen : bool = false
+@onready var active_special_timer : Timer = $SpecialRegenActiveTimer
+@onready var regen_special_timer : Timer = $RegenSpecialTimer
 
 func _ready() -> void:
 	anim_player = $AnimationPlayer
@@ -24,3 +27,20 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if !body.is_invincible:
 			health -= body.damage
 			bar.health = health
+
+
+func _on_regen_special_timer_timeout() -> void:
+	is_special_regen = true
+	active_special_timer.start()
+
+
+func _on_special_regen_active_timer_timeout() -> void:
+	if is_special_regen:
+		active_special_timer.start()
+		if special < max_special:
+			special += 3
+			bar.special = special
+			bar.special_bar_white.value = special
+		else:
+			special = max_special
+			bar.special_bar_white.value = special
