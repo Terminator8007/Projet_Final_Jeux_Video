@@ -5,13 +5,34 @@ var health : int = 100
 @export var invincibility_duration : float = 0.4  # Durée d'invincibilité en secondes
 var is_invincible : bool = false  # État d'invincibilité
 var damage : int = 3
+@export var patrol_speed: float = 100.0
+@export var chase_speed: float = 150.0
+var is_chasing: bool = false
+var player_detected: bool = false
+var target_point: Vector2 = Vector2.ZERO
+var patrol_wait_timer: Timer
+@export var patrol_wait_time: float = 2.0
+@export var patrol_area: Area2D
+
+func _ready():
+	damage = randi_range(3, 8)
+	patrol_wait_timer = $PatrolWaitTimer
+	
+	_generate_new_patrol_point()
 
 func _physics_process(delta: float) -> void:
-	# Applique la friction si le personnage est en mouvement
+	if is_chasing and player_detected:
+		chase_player(delta)
+	else:
+		patrol(delta)
+	
+	# Oriente le sprite et le champ de vision dans la direction du mouvement
+	if velocity.length() > 0:
+		look_at(position + velocity.normalized() * 10)
+
+	# Applique la friction au mouvement
 	if velocity.length() > 0:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-	
-	# Applique le mouvement
 	move_and_slide()
 
 func take_damage(damage_taken : int) -> void:
@@ -36,3 +57,45 @@ func _on_timer_timeout() -> void:
 
 func ennemy():
 	pass
+
+func patrol(delta: float):
+	if patrol_area == null:
+		return
+	
+	if target_point.distance_to(position) < 5.0:
+		velocity = Vector2.ZERO
+		patrol_wait_timer.wait_time = randf_range(1, 3)
+		patrol_wait_timer.start()
+		return
+	
+	var direction = (target_point - position).normalized()
+	velocity = direction * patrol_speed
+
+func chase_player(delta: float):
+	var player = get_node("$../Main_Character") as Node2D
+	var direction = (player.position - position).normalized()
+	velocity = direction * chase_speed
+
+func _on_vision_area_2d_body_entered(body: Node2D) -> void:
+	if body.get_class() == "Player":
+		player_detected = true
+		is_chasing = true
+
+
+func _on_vision_area_2d_body_exited(body: Node2D) -> void:
+	if body.get_class() == "Player":
+		player_detected = false
+		is_chasing = false
+
+func _generate_new_patrol_point():
+	if patrol_area == null:
+		return
+	
+	var patrol_shape = patrol_area.get_node("CollisionShape2D") as CollisionShape2D
+	if patrol_shape.shape is CollisionPolygon2D:
+		var bounds = patrol_shape.shape.extents
+		var patrol_origin = patrol_area.global_position
+		target_point = patrol_origin + Vector2(
+			randf_range(-bounds.x, bounds.x),
+			randf_range(-bounds.y, bounds.y)
+		)

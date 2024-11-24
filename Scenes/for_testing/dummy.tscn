@@ -1,16 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://mltbdilh6km4"]
 
-[ext_resource type="Texture2D" uid="uid://dpka0au20lvl8" path="res://icon.svg" id="1_fc8mg"]
 [ext_resource type="Script" path="res://Scenes/for_testing/dummy.gd" id="1_y6rlr"]
+[ext_resource type="Texture2D" uid="uid://b5p33vhlrw0lw" path="res://Assets/sprites_sheets/Toast With Helmet - Silver 36x36.png" id="2_8qp0h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1icl0"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_y6rlr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_fc8mg")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_8qp0h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1icl0")
@@ -18,4 +19,15 @@ shape = SubResource("CircleShape2D_1icl0")
 [node name="InvincibilityTimer" type="Timer" parent="."]
 wait_time = 0.4
 
+[node name="VisionArea2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea2D"]
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+polygon = PackedVector2Array(0, 0, -86, -89, -92, -68, -101, -29, -104, 0, -101, 29, -92, 68, -86, 89)
+
+[node name="PatrolWaitTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="InvincibilityTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="VisionArea2D" to="." method="_on_vision_area_2d_body_entered"]
+[connection signal="body_exited" from="VisionArea2D" to="." method="_on_vision_area_2d_body_exited"]

@@ -18,7 +18,6 @@ func _ready() -> void:
 	bar.init_special(special)
 	anim_player.play("Idle_Bas")
 
-
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 

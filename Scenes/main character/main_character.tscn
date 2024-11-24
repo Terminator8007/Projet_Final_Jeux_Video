@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bitg6s866gu44"]
+[gd_scene load_steps=38 format=3 uid="uid://bitg6s866gu44"]
 
 [ext_resource type="Script" path="res://Scenes/main character/main_character.gd" id="1_mea8v"]
 [ext_resource type="Texture2D" uid="uid://36vg8jwne0d1" path="res://Assets/sprites_sheets/Main_character_sprite_sheet.png" id="2_hdcxk"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Scenes/main character/attaque_speciale.gd" id="11_fqqwr"]
 [ext_resource type="AudioStream" uid="uid://bemfls88diy6s" path="res://Assets/sfx/27_Wind_03.wav" id="13_ptgso"]
 [ext_resource type="PackedScene" uid="uid://hwxpyv05l7re" path="res://Scenes/UI/health_bar.tscn" id="14_1wn3i"]
+[ext_resource type="PackedScene" uid="uid://b34ejlnfgxv5k" path="res://Scenes/Debug/debug.tscn" id="15_cu3s4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a3ajm"]
 radius = 6.08276
@@ -1152,6 +1153,13 @@ one_shot = true
 [node name="SpecialRegenActiveTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="Debug" parent="." instance=ExtResource("15_cu3s4")]
+z_index = 2
+offset_left = 288.0
+offset_top = -180.0
+offset_right = 288.0
+offset_bottom = -180.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/Attaque1" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine/Attaque2" method="_on_animation_player_animation_finished"]
