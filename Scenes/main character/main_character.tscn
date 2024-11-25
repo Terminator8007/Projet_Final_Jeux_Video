@@ -1067,6 +1067,7 @@ script = ExtResource("11_fqqwr")
 player = NodePath("../..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2(0, -18)
 zoom = Vector2(2, 2)
 limit_smoothed = true

@@ -7,6 +7,7 @@
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 z_index = 1
+floor_stop_on_slope = false
 script = ExtResource("1_y6rlr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -27,7 +28,9 @@ scale = Vector2(1.5, 1.5)
 polygon = PackedVector2Array(0, 0, -86, -89, -92, -68, -101, -29, -104, 0, -101, 29, -92, 68, -86, 89)
 
 [node name="PatrolWaitTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="timeout" from="InvincibilityTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="VisionArea2D" to="." method="_on_vision_area_2d_body_entered"]
 [connection signal="body_exited" from="VisionArea2D" to="." method="_on_vision_area_2d_body_exited"]
+[connection signal="timeout" from="PatrolWaitTimer" to="." method="_generate_new_patrol_point"]

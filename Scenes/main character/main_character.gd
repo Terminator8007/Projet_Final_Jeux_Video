@@ -43,3 +43,5 @@ func _on_special_regen_active_timer_timeout() -> void:
 		else:
 			special = max_special
 			bar.special_bar_white.value = special
+func player():
+	pass

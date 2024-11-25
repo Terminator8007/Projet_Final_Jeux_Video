@@ -13,6 +13,7 @@ var target_point: Vector2 = Vector2.ZERO
 var patrol_wait_timer: Timer
 @export var patrol_wait_time: float = 2.0
 @export var patrol_area: Area2D
+var patrol_point_arrived: bool = false
 
 func _ready():
 	damage = randi_range(3, 8)
@@ -29,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	# Oriente le sprite et le champ de vision dans la direction du mouvement
 	if velocity.length() > 0:
 		look_at(position + velocity.normalized() * 10)
-
+	
 	# Applique la friction au mouvement
 	if velocity.length() > 0:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
@@ -62,8 +63,9 @@ func patrol(delta: float):
 	if patrol_area == null:
 		return
 	
-	if target_point.distance_to(position) < 5.0:
+	if target_point.distance_to(position) < 10.0 and !patrol_point_arrived:
 		velocity = Vector2.ZERO
+		patrol_point_arrived = true
 		patrol_wait_timer.wait_time = randf_range(1, 3)
 		patrol_wait_timer.start()
 		return
@@ -72,30 +74,34 @@ func patrol(delta: float):
 	velocity = direction * patrol_speed
 
 func chase_player(delta: float):
-	var player = get_node("$../Main_Character") as Node2D
+	var player = get_node("../Main_Character") as CharacterBody2D
 	var direction = (player.position - position).normalized()
 	velocity = direction * chase_speed
 
 func _on_vision_area_2d_body_entered(body: Node2D) -> void:
-	if body.get_class() == "Player":
+	if body.has_method("player"):
 		player_detected = true
 		is_chasing = true
 
 
 func _on_vision_area_2d_body_exited(body: Node2D) -> void:
-	if body.get_class() == "Player":
+	if body.has_method("player"):
 		player_detected = false
 		is_chasing = false
 
 func _generate_new_patrol_point():
+	patrol_point_arrived = false
 	if patrol_area == null:
 		return
 	
+	# Obtenir les limites de l'Area2D
 	var patrol_shape = patrol_area.get_node("CollisionShape2D") as CollisionShape2D
-	if patrol_shape.shape is CollisionPolygon2D:
+	if patrol_shape.shape is RectangleShape2D:
 		var bounds = patrol_shape.shape.extents
 		var patrol_origin = patrol_area.global_position
 		target_point = patrol_origin + Vector2(
 			randf_range(-bounds.x, bounds.x),
 			randf_range(-bounds.y, bounds.y)
 		)
+		
+		print(target_point)
