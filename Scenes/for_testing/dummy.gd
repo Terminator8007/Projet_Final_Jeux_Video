@@ -22,6 +22,10 @@ func _ready():
 	_generate_new_patrol_point()
 
 func _physics_process(delta: float) -> void:
+	if is_invincible:
+		move_and_slide()
+		return
+	
 	if is_chasing and player_detected:
 		chase_player(delta)
 	else:

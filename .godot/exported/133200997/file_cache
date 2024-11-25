@@ -1,6 +1,6 @@
-res://Scenes/for_testing/dummy.tscn::c877d528d9bd1c466e21d0a080a6afc3::1732222649::res://.godot/exported/133200997/export-cac118017d9fea275881fc8f328533b7-dummy.scn
-res://Scenes/main character/main_character.tscn::7e9179cde14088d7adc7deaf0f2ed3ea::1732222649::res://.godot/exported/133200997/export-f0d3ab75184939480565b6fdf3967755-main_character.scn
-res://Scenes/main menu/main_menu.tscn::6199220be1f4e9889b5c9ef42ba59513::1732222648::res://.godot/exported/133200997/export-46aed4845f0bdb4b4bf7254943daaf5c-main_menu.scn
+res://Scenes/for_testing/dummy.tscn::c61bb9077b228ed98f709ade78c7c8bd::1732570038::res://.godot/exported/133200997/export-cac118017d9fea275881fc8f328533b7-dummy.scn
+res://Scenes/main character/main_character.tscn::14d2f51df181e0d697481cd697a93412::1732570037::res://.godot/exported/133200997/export-f0d3ab75184939480565b6fdf3967755-main_character.scn
+res://Scenes/main menu/main_menu.tscn::fac670df5fe7eb199fb4c60612e42b10::1732570037::res://.godot/exported/133200997/export-46aed4845f0bdb4b4bf7254943daaf5c-main_menu.scn
 res://Scenes/options menu/audio_slider_settings.tscn::574fa130baf06065fe8156db95d30692::1730165469::res://.godot/exported/133200997/export-a3e92dc037528eb7d5fb621d653b2bbf-audio_slider_settings.scn
 res://Scenes/options menu/options_display_button.tscn::5a7f195aa3e6974a4d3629d3961138d8::1730166940::res://.godot/exported/133200997/export-9617cfcda54c12436c0613729d00f79e-options_display_button.scn
 res://Scenes/options menu/options_menu.tscn::885aa6162513191b3d02cd3f0ccb3dcf::1730166867::res://.godot/exported/133200997/export-13fd870498976b6e4a04f3ce6c3a267f-options_menu.scn
@@ -8,6 +8,7 @@ res://Scenes/options menu/options_tab_container.tscn::30fe49dc936048624e51f470ca
 res://Scenes/options menu/resolution_mode_button.tscn::2608e657f7e97a98dea842fa8619fe21::1730166867::res://.godot/exported/133200997/export-6d129488d79131faa7999460a2190601-resolution_mode_button.scn
 res://Scenes/options menu/window_mode_button.tscn::adb6d5f3cc6bde1c23643b55846d21eb::1730165468::res://.godot/exported/133200997/export-4a434d22de88383d64e73d5711e6c1fc-window_mode_button.scn
 res://Scenes/test_shader/test_shader.tscn::c2f5eb7cee75b2cd86600b806e832fc3::1731454590::res://.godot/exported/133200997/export-5c3292e51e33487b27736acf0338d6cb-test_shader.scn
-res://Scenes/UI/health_bar.tscn::fb7d4468b42c5a73ce79595c3472a2ac::1732222649::res://.godot/exported/133200997/export-3c22c99c9eae435a7935ac51a85feb41-health_bar.scn
-res://Scenes/world_map/world_map.tscn::53064f77b4949c71340c45fc6c05cf5a::1732222649::res://.godot/exported/133200997/export-1c149aecb45ba5238ca428ee864ae36e-world_map.scn
+res://Scenes/UI/health_bar.tscn::fb7d4468b42c5a73ce79595c3472a2ac::1732570038::res://.godot/exported/133200997/export-3c22c99c9eae435a7935ac51a85feb41-health_bar.scn
+res://Scenes/world_map/world_map.tscn::c1883eab2e41c2043bdb3ce1fa396801::1732570038::res://.godot/exported/133200997/export-1c149aecb45ba5238ca428ee864ae36e-world_map.scn
 res://default_bus_layout.tres::3cc66ffc52abb1f10250c1eb3540d4e7::1731525411::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://Scenes/Debug/debug.tscn::21d8b26a55264d2a3821a27b2a135507::1732570038::res://.godot/exported/133200997/export-bd8529cb786c331e8e15273ed984950a-debug.scn
