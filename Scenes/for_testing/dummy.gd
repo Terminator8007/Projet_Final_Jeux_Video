@@ -108,4 +108,3 @@ func _generate_new_patrol_point():
 			randf_range(-bounds.y, bounds.y)
 		)
 		
-		print(target_point)

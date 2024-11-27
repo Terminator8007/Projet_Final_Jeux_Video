@@ -1,8 +1,9 @@
-res://Scenes/main menu/main_menu.tscn
+res://Scenes/Debug/debug.tscn
 res://Scenes/test_shader/test_shader.gdshader
+res://Assets/Scripts/GLOBAL.gd
+res://Scenes/main menu/main_menu.tscn
 res://Scenes/main character/main_character.tscn
 res://Scenes/world_map/world_map.tscn
 res://Scenes/for_testing/dummy.tscn
 res://Scenes/UI/health_bar.tscn
-res://Scenes/Debug/debug.tscn
 res://Scenes/for_testing/dummy.gd
