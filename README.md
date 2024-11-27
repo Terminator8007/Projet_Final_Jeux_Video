@@ -11,9 +11,8 @@ Ce concept sert à faire en sorte que les ennemis puisse se déplacer tout seul.
 ###  Champs de vision
 Un champ de vision pour la détection du joueur par les ennemis
 
-###  Spacial partition
-C'est un concept utilisé pour faire en sorte que la carte ne soit pas entièrement charger en permanence mais plûtot en parties autour du joueur.
-https://gameprogrammingpatterns.com/spatial-partition.html
+###  Regénération de la vie et de la jauge de capacité spéciale
+La vie commencera à se regénérer toute seule si le joueur reste immobile pendant trois seconde. Si il bouge la vie arrêtera de se regénérer. La jauge de capacité spéciale commence à se regénérer après cinq secondes dìnutilisation de l'attaqie spéciale. Cette mécanique permet de faire en sorte que le joueur puisse se soigner mais il doit être en lieu sûr et qu'il puisse utiliser son attaque spéciale plusieurs fois sans en abuser.
 
 ###  Apparition de coffre
 Faire en sorte qu'un coffre apparaisse lorsqu'une certaine condition est rempli.
