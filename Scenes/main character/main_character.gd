@@ -20,6 +20,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+	if (health < 0):
+		health = 0
+		bar.special_bar_white.value = health
+		die()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("ennemy"):
@@ -44,4 +48,7 @@ func _on_special_regen_active_timer_timeout() -> void:
 			special = max_special
 			bar.special_bar_white.value = special
 func player():
+	pass
+
+func die():
 	pass

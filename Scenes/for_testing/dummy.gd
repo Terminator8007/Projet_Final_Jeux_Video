@@ -14,6 +14,7 @@ var patrol_wait_timer: Timer
 @export var patrol_wait_time: float = 2.0
 @export var patrol_area: Area2D
 var patrol_point_arrived: bool = false
+var look_at_point_stop: Vector2 = Vector2(0, 0)
 
 func _ready():
 	damage = randi_range(3, 8)
@@ -32,12 +33,11 @@ func _physics_process(delta: float) -> void:
 		patrol(delta)
 	
 	# Oriente le sprite et le champ de vision dans la direction du mouvement
-	if velocity.length() > 0:
+	if velocity.length() > 0 && !patrol_point_arrived:
 		look_at(position + velocity.normalized() * 10)
-	
-	# Applique la friction au mouvement
-	if velocity.length() > 0:
+		look_at_point_stop = position + velocity.normalized() * 10
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+	
 	move_and_slide()
 
 func take_damage(damage_taken : int) -> void:
@@ -67,19 +67,22 @@ func patrol(delta: float):
 	if patrol_area == null:
 		return
 	
-	if target_point.distance_to(position) < 10.0 and !patrol_point_arrived:
+	if target_point.distance_to(position) < 25.0 and !patrol_point_arrived:
 		velocity = Vector2.ZERO
 		patrol_point_arrived = true
 		patrol_wait_timer.wait_time = randf_range(1, 3)
 		patrol_wait_timer.start()
+		look_at(look_at_point_stop)
 		return
-	
-	var direction = (target_point - position).normalized()
-	velocity = direction * patrol_speed
+	if !patrol_point_arrived:
+		var direction = (target_point - position).normalized()
+		velocity = direction * patrol_speed
 
 func chase_player(delta: float):
 	var player = get_node("../Main_Character") as CharacterBody2D
 	var direction = (player.position - position).normalized()
+	look_at(player.position)
+	look_at_point_stop = player.position
 	velocity = direction * chase_speed
 
 func _on_vision_area_2d_body_entered(body: Node2D) -> void:
@@ -102,6 +105,7 @@ func _generate_new_patrol_point():
 	var patrol_shape = patrol_area.get_node("CollisionShape2D") as CollisionShape2D
 	if patrol_shape.shape is RectangleShape2D:
 		var bounds = patrol_shape.shape.extents
+		
 		var patrol_origin = patrol_area.global_position
 		target_point = patrol_origin + Vector2(
 			randf_range(-bounds.x, bounds.x),

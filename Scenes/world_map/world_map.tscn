@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dmgv2f7f43wne"]
+[gd_scene load_steps=9 format=4 uid="uid://dmgv2f7f43wne"]
 
 [ext_resource type="PackedScene" uid="uid://bitg6s866gu44" path="res://Scenes/main character/main_character.tscn" id="1_mkodx"]
 [ext_resource type="AudioStream" uid="uid://di0jvl06u6pg" path="res://Assets/musics/Conquest_loop.ogg" id="3_5syx1"]
@@ -963,6 +963,9 @@ sources/0 = SubResource("TileSetAtlasSource_x7dgq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8m7v"]
 size = Vector2(489, 271)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2hsg"]
+size = Vector2(170, 229)
+
 [node name="world_map" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(1, 0)
@@ -996,28 +999,31 @@ stream = ExtResource("3_5syx1")
 autoplay = true
 bus = &"Musique"
 
-[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
-top_level = true
-position = Vector2(-548, -371)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-586, -333)
+enabled = false
+
+[node name="CharacterBody2D8" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(-549, -371)
 patrol_area = NodePath("../Area2D")
 
-[node name="CharacterBody2D2" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+[node name="CharacterBody2D9" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-556, -350)
 patrol_area = NodePath("../Area2D")
 
-[node name="CharacterBody2D3" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+[node name="CharacterBody2D10" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-581, -343)
 patrol_area = NodePath("../Area2D")
 
-[node name="CharacterBody2D4" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+[node name="CharacterBody2D11" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-598, -357)
 patrol_area = NodePath("../Area2D")
 
-[node name="CharacterBody2D5" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+[node name="CharacterBody2D12" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-603, -378)
 patrol_area = NodePath("../Area2D")
 
-[node name="CharacterBody2D6" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+[node name="CharacterBody2D13" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-586, -397)
 patrol_area = NodePath("../Area2D")
 
@@ -1032,6 +1038,9 @@ position = Vector2(-611, -395)
 z_index = 1
 shape = SubResource("RectangleShape2D_t8m7v")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-586, -333)
-enabled = false
+[node name="ZoneFin" type="Area2D" parent="."]
+position = Vector2(2677, -807)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneFin"]
+position = Vector2(9, -87.5)
+shape = SubResource("RectangleShape2D_r2hsg")

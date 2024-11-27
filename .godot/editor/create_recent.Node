@@ -1,8 +1,10 @@
-Camera2D
+TextureRect
 CollisionShape2D
+Area2D
+Node
+Camera2D
 CollisionPolygon2D
 Polygon2D
-Area2D
 Timer
 HSeparator
 Label
@@ -11,5 +13,3 @@ PanelContainer
 TextureProgressBar
 ProgressBar
 NinePatchRect
-Control
-AudioStreamPlayer

@@ -7,3 +7,5 @@ res://Scenes/world_map/world_map.tscn
 res://Scenes/for_testing/dummy.tscn
 res://Scenes/UI/health_bar.tscn
 res://Scenes/for_testing/dummy.gd
+res://Scenes/main character/main_character.gd
+res://Scenes/fin/scene_victoire.tscn
