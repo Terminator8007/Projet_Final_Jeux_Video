@@ -9,6 +9,7 @@ class_name Player
 var is_special_regen : bool = false
 @onready var active_special_timer : Timer = $SpecialRegenActiveTimer
 @onready var regen_special_timer : Timer = $RegenSpecialTimer
+@onready var scene_fin : PackedScene = preload("res://Scenes/fin/scene_fin.tscn")
 
 func _ready() -> void:
 	anim_player = $AnimationPlayer
@@ -23,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	if (health < 0):
 		health = 0
 		bar.special_bar_white.value = health
+		Global.player_alive = false
 		die()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -51,4 +53,4 @@ func player():
 	pass
 
 func die():
-	pass
+	get_tree().change_scene_to_packed(Global.end_scene)

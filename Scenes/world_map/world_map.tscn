@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://dmgv2f7f43wne"]
+[gd_scene load_steps=10 format=4 uid="uid://dmgv2f7f43wne"]
 
 [ext_resource type="PackedScene" uid="uid://bitg6s866gu44" path="res://Scenes/main character/main_character.tscn" id="1_mkodx"]
 [ext_resource type="AudioStream" uid="uid://di0jvl06u6pg" path="res://Assets/musics/Conquest_loop.ogg" id="3_5syx1"]
 [ext_resource type="Texture2D" uid="uid://ngdl637oqhgv" path="res://Assets/Tileset/Forest-Summer-Spring-spritesheet.png" id="3_hd0en"]
 [ext_resource type="PackedScene" uid="uid://mltbdilh6km4" path="res://Scenes/for_testing/dummy.tscn" id="4_h8k6c"]
+[ext_resource type="Script" path="res://Scenes/world_map/zone_fin.gd" id="5_vi145"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7dgq"]
 texture = ExtResource("3_hd0en")
@@ -1040,7 +1041,10 @@ shape = SubResource("RectangleShape2D_t8m7v")
 
 [node name="ZoneFin" type="Area2D" parent="."]
 position = Vector2(2677, -807)
+script = ExtResource("5_vi145")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneFin"]
 position = Vector2(9, -87.5)
 shape = SubResource("RectangleShape2D_r2hsg")
+
+[connection signal="body_entered" from="ZoneFin" to="ZoneFin" method="_on_body_entered"]

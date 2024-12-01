@@ -1,20 +1,18 @@
 class_name MainMenu
 extends Control
 
-@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Play_Button as Button
-@onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Quitter_Button  as Button
-@onready var option_button = $MarginContainer/HBoxContainer/VBoxContainer/Options_Button  as Button
-@onready var options_menu = $Options_Menu as OptionsMenu
-@onready var margin_container = $MarginContainer as MarginContainer
-
-@export var start_level = preload("res://Scenes/world_map/world_map.tscn") as PackedScene
+@onready var start_button: Button = $MarginContainer/HBoxContainer/VBoxContainer/Play_Button
+@onready var exit_button: Button = $MarginContainer/HBoxContainer/VBoxContainer/Quitter_Button
+@onready var option_button: Button = $MarginContainer/HBoxContainer/VBoxContainer/Options_Button 
+@onready var options_menu:OptionsMenu = $Options_Menu
+@onready var margin_container: MarginContainer = $MarginContainer
 
 func _ready():
 	handle_connecting_signals()
 	start_button.grab_focus()
 
 func on_start_pressed() -> void:
-	get_tree().change_scene_to_packed(start_level)
+	get_tree().change_scene_to_packed(Global.start_level)
 
 func on_option_pressed() -> void:
 	margin_container.visible = false

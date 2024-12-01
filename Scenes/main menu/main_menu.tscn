@@ -1,19 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://c04a16rd2lgf7"]
 
-[ext_resource type="Texture2D" uid="uid://dvnyf1ryhsvfr" path="res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.jpg" id="1_4yey3"]
 [ext_resource type="Script" path="res://Scenes/main menu/main_menu.gd" id="1_hvwvr"]
+[ext_resource type="Texture2D" uid="uid://b218l7yjt2ipe" path="res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.png" id="2_tqciv"]
 [ext_resource type="AudioStream" uid="uid://bfcsninpv2moq" path="res://Assets/musics/main-theme02.ogg" id="3_8hj2w"]
 [ext_resource type="PackedScene" uid="uid://djkhg0aitpf50" path="res://Scenes/options menu/options_menu.tscn" id="3_v8jdg"]
 [ext_resource type="PackedScene" uid="uid://b34ejlnfgxv5k" path="res://Scenes/Debug/debug.tscn" id="4_uysm0"]
 
 [sub_resource type="SystemFont" id="SystemFont_wh77g"]
 font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_wijj5"]
 font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_ifbra"]
 font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -31,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4yey3")
+texture = ExtResource("2_tqciv")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

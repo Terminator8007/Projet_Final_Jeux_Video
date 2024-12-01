@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgx8x3860qw46"]
+
+[ext_resource type="Script" path="res://Scenes/fin/scene_fin.gd" id="1_fgqxl"]
+[ext_resource type="Texture2D" uid="uid://wtx0d4l2gijv" path="res://Assets/images/image victoire.png" id="2_geg4j"]
+
+[sub_resource type="SystemFont" id="SystemFont_mvebm"]
+font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_0yg8i"]
+font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_knemc"]
+font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
+
+[node name="SceneFin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fgqxl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_geg4j")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -390.0
+offset_right = 390.0
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = SubResource("SystemFont_mvebm")
+theme_override_font_sizes/font_size = 64
+text = "Vous avez toasté les toasts!!!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -106.5
+offset_right = 60.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="Separator" type="Control" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Menu_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Quitter_Button")
+focus_neighbor_bottom = NodePath("../Recommencer_Button")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_0yg8i")
+theme_override_font_sizes/font_size = 24
+text = "Menu principal"
+
+[node name="Recommencer_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Menu_Button")
+focus_neighbor_bottom = NodePath("../Quitter_Button")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_knemc")
+theme_override_font_sizes/font_size = 24
+text = "Recommencer"
+
+[node name="Quitter_Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Recommencer_Button")
+focus_neighbor_bottom = NodePath("../Menu_Button")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_knemc")
+theme_override_font_sizes/font_size = 24
+text = "Quitter
+"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Menu_Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Recommencer_Button" to="." method="_on_recommencer_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Quitter_Button" to="." method="_on_quitter_button_pressed"]

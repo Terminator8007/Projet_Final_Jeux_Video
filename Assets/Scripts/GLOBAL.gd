@@ -24,6 +24,10 @@ var arcade_mapping = {
 	"Bouton R1": InputEventJoypadButton.new(),
 	"Bouton R2": InputEventJoypadButton.new(),
 }
+var player_alive: bool = true
+@export var start_level: PackedScene = preload("res://Scenes/world_map/world_map.tscn")
+@export var end_scene: PackedScene = preload("res://Scenes/fin/scene_fin.tscn")
+@export var main_menu_scene: PackedScene = preload("res://Scenes/main menu/main_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,6 +56,8 @@ func manage_input() -> void:
 	if Input.is_action_just_pressed("Mute"):
 		muted = !muted
 		AudioServer.set_bus_mute(bus_idx, muted)
+	if Input.is_action_just_pressed("Scene Fin"):
+		get_tree().change_scene_to_packed(end_scene)
 	
 	manage_end_game()
 

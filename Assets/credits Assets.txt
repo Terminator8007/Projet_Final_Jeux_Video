@@ -2,6 +2,7 @@ sprite personnage principal par Pixeline:  https://pixeline-k.itch.io/character-
 tileset par Pixeline: https://pixeline-k.itch.io/pixel-art-forest-asset-pack
 
 Fond d'écran menu principal Générer par ChatGPT utilisant DallE-3 et agrandi par Bigjpg : https://chatgpt.com https://bigjpg.com/
+Fond d'écran menu principal Générer par ChatGPT utilisant DallE-3 et agrandi par Waifu2x : https://chatgpt.com https://www.waifu2x.net/
 
 Musiques par Youfulca: https://youfulca.com/music_assets/
 
