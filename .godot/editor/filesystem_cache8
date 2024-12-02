@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733077237
+::res://::1733081458
 default_bus_layout.tres::AudioBusLayout::1999181247034465020::1731525411::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1732221689::0::1::::<><>::
 icon.svg::CompressedTexture2D::8232783160194719283::1729702014::1730614384::1::::<><>::
@@ -11,23 +11,27 @@ DALL·E 2024-10-27 15.04.25 - main menu background.png::CompressedTexture2D::203
 DALL·E 2024-10-27 15.04.25 - main menu background.png::CompressedTexture2D::4337218306277667530::1732737185::1732737201::1::::<><>::
 image game over.png::CompressedTexture2D::7311104354130606059::1732844425::1732844428::1::::<><>::
 image victoire.png::CompressedTexture2D::1584819075950593895::1732736766::1732736963::1::::<><>::
-::res://Assets/musics/::1731356621
+::res://Assets/musics/::1733087748
 Conquest_loop.ogg::AudioStreamOggVorbis::228616671072217072::1730911070::1731356621::1::::<><>::
+GameOver_loop.ogg::AudioStreamOggVorbis::2408295318939365161::1733085476::1733085773::1::::<><>::
+jingle1.ogg::AudioStreamOggVorbis::4341906615358341195::1733087748::1733087748::1::::<><>::
 main-theme02.ogg::AudioStreamOggVorbis::2742610219561871076::1730123683::1730614383::1::::<><>::
-::res://Assets/Scripts/::1732844650
+::res://Assets/Scripts/::1733090118
 base_state.gd::GDScript::-1::1728479331::0::1::::BaseState<>Node<>::
 generic_character.gd::GDScript::-1::1731505756::0::1::::GenericCharacter<>CharacterBody2D<>::
-GLOBAL.gd::GDScript::-1::1732844650::0::1::::<>Node<>::
-::res://Assets/sfx/::1731525345
+GLOBAL.gd::GDScript::-1::1733090118::0::1::::<>Node<>::
+::res://Assets/sfx/::1733089968
 07_human_atk_sword_1.wav::AudioStreamWAV::3379408685936209470::1731513288::1731513292::1::::<><>::
 27_Wind_03.wav::AudioStreamWAV::2692272817893303648::1731525336::1731525345::1::::<><>::
-::res://Assets/sprites_sheets/::1732481285
+crunch.mp3::AudioStreamMP3::5776889574287053373::1733089965::1733089968::1::::<><>::
+::res://Assets/sprites_sheets/::1733089798
 anim epee.png::CompressedTexture2D::7914390477655136371::1731510281::1731510287::1::::<><>::
 animation attaque speciale.png::CompressedTexture2D::8612743489351889902::1731522449::1731522453::1::::<><>::
 Main_character_sprite_sheet - Copie.png::CompressedTexture2D::5135499018411530873::1729822810::1730614384::1::::<><>::
 Main_character_sprite_sheet.png::CompressedTexture2D::2030570852043217364::1730220396::1730614384::1::::<><>::
 Toast With Helmet - Silver 36x36.png::CompressedTexture2D::4524802851499152592::1732481278::1732481285::1::::<><>::
 Toast With Helmet - Silver 72x72.png::CompressedTexture2D::1223372575671211628::1732477442::1732477442::1::::<><>::
+toast.png::CompressedTexture2D::7771011896954786412::1733089795::1733089798::1::::<><>::
 ::res://Assets/Tileset/::1730771359
 Forest-Summer-Spring-spritesheet.png::CompressedTexture2D::925044701481690461::1730771265::1730771359::1::::<><>::
 ::res://Assets/UI/::1731876909
@@ -39,29 +43,35 @@ ValueBar_128x16.png::CompressedTexture2D::3733806877926599890::1731871051::17318
 ValueBlue_120x8.png::CompressedTexture2D::7478986529634182778::1731871051::1731871051::1::::<><>::
 ValueRed_120x8.png::CompressedTexture2D::3418010064992475872::1731871051::1731871051::1::::<><>::
 ValueWhite_120x8.png::CompressedTexture2D::2295896435557726622::1731873552::1731873565::1::::<><>::
-::res://Scenes/::1732735280
-::res://Scenes/Debug/::1732853569
+::res://Scenes/::1733113335
+::res://Scenes/collectibles/::1733113408
+toast.gd::GDScript::-1::1733090467::0::1::::<>Sprite2D<>::
+toast.tscn::PackedScene::834021291597385934::1733113408::0::1::::<><>::uid://diylov0wvo4jg::::res://Assets/sprites_sheets/toast.png<>res://Scenes/collectibles/toast.gd<>uid://cokmr6r8y61hp::::res://Assets/sfx/crunch.mp3
+::res://Scenes/Debug/::1733113408
 debug.gd::GDScript::-1::1732296765::0::1::::Debug<>Control<>::
-debug.tscn::PackedScene::4411834798617384658::1732853569::0::1::::<><>::res://Scenes/Debug/debug.gd
-::res://Scenes/fin/::1732853569
-scene_fin.gd::GDScript::-1::1732853562::0::1::::<>Control<>::
-scene_fin.tscn::PackedScene::7629922058346889857::1732853569::0::1::::<><>::res://Scenes/fin/scene_fin.gd<>uid://wtx0d4l2gijv::::res://Assets/images/image victoire.png
-::res://Scenes/for_testing/::1732853569
-dummy.gd::GDScript::-1::1732735764::0::1::::<>CharacterBody2D<>::
-dummy.tscn::PackedScene::866129858046374053::1732853569::0::1::::<><>::res://Scenes/for_testing/dummy.gd<>uid://b5p33vhlrw0lw::::res://Assets/sprites_sheets/Toast With Helmet - Silver 36x36.png
-::res://Scenes/main character/::1732853569
+debug.tscn::PackedScene::4411834798617384658::1733113408::0::1::::<><>::res://Scenes/Debug/debug.gd
+::res://Scenes/fin/::1733113408
+scene_fin.gd::GDScript::-1::1733090157::0::1::::<>Control<>::
+scene_fin.tscn::PackedScene::7629922058346889857::1733113408::0::1::::<><>::res://Scenes/fin/scene_fin.gd<>uid://wtx0d4l2gijv::::res://Assets/images/image victoire.png
+::res://Scenes/for_testing/::1733113408
+dummy.gd::GDScript::-1::1733106528::0::1::::Ennemis<>CharacterBody2D<>::
+dummy.tscn::PackedScene::866129858046374053::1733113408::0::1::::<><>::res://Scenes/for_testing/dummy.gd<>uid://b5p33vhlrw0lw::::res://Assets/sprites_sheets/Toast With Helmet - Silver 36x36.png
+::res://Scenes/main character/::1733113408
 attaque_1.gd::GDScript::-1::1732128788::0::1::::PlayerAttaque1<>BaseState<>::
 attaque_2.gd::GDScript::-1::1732127885::0::1::::PlayerAttaque2<>BaseState<>::
 attaque_3.gd::GDScript::-1::1732127885::0::1::::PlayerAttaque3<>BaseState<>::
 attaque_speciale.gd::GDScript::-1::1732206830::0::1::::PlayerAttaqueSpeciale<>BaseState<>::
 idle.gd::GDScript::-1::1732208120::0::1::::PlayerIdle<>BaseState<>::
-main_character.gd::GDScript::-1::1732849417::0::1::::Player<>GenericCharacter<>::
-main_character.tscn::PackedScene::2987575269541179271::1732853568::0::1::::<><>::res://Scenes/main character/main_character.gd<>uid://36vg8jwne0d1::::res://Assets/sprites_sheets/Main_character_sprite_sheet.png<>uid://dk014chojj7a2::::res://Assets/sprites_sheets/anim epee.png<>res://Scenes/main character/state_machine.gd<>uid://duycvky64xewk::::res://Assets/sprites_sheets/animation attaque speciale.png<>res://Scenes/main character/idle.gd<>res://Scenes/main character/run.gd<>res://Scenes/main character/attaque_1.gd<>res://Scenes/main character/attaque_2.gd<>res://Scenes/main character/attaque_3.gd<>uid://bofamqvem6fm1::::res://Assets/sfx/07_human_atk_sword_1.wav<>res://Scenes/main character/attaque_speciale.gd<>uid://bemfls88diy6s::::res://Assets/sfx/27_Wind_03.wav<>uid://hwxpyv05l7re::::res://Scenes/UI/health_bar.tscn<>uid://b34ejlnfgxv5k::::res://Scenes/Debug/debug.tscn
+main_character.gd::GDScript::-1::1733081936::0::1::::Player<>GenericCharacter<>::
+main_character.tscn::PackedScene::2987575269541179271::1733113408::0::1::::<><>::res://Scenes/main character/main_character.gd<>uid://36vg8jwne0d1::::res://Assets/sprites_sheets/Main_character_sprite_sheet.png<>uid://dk014chojj7a2::::res://Assets/sprites_sheets/anim epee.png<>res://Scenes/main character/state_machine.gd<>uid://duycvky64xewk::::res://Assets/sprites_sheets/animation attaque speciale.png<>res://Scenes/main character/idle.gd<>res://Scenes/main character/run.gd<>res://Scenes/main character/attaque_1.gd<>res://Scenes/main character/attaque_2.gd<>res://Scenes/main character/attaque_3.gd<>uid://bofamqvem6fm1::::res://Assets/sfx/07_human_atk_sword_1.wav<>res://Scenes/main character/attaque_speciale.gd<>uid://bemfls88diy6s::::res://Assets/sfx/27_Wind_03.wav<>uid://hwxpyv05l7re::::res://Scenes/UI/health_bar.tscn<>uid://b34ejlnfgxv5k::::res://Scenes/Debug/debug.tscn
 run.gd::GDScript::-1::1732131950::0::1::::PlayerRun<>BaseState<>::
 state_machine.gd::GDScript::-1::1731965060::0::1::::<>Node<>::
-::res://Scenes/main menu/::1732853569
-main_menu.gd::GDScript::-1::1732852958::0::1::::MainMenu<>Control<>::
-main_menu.tscn::PackedScene::6587477498504628874::1732853569::0::1::::<><>::res://Scenes/main menu/main_menu.gd<>uid://b218l7yjt2ipe::::res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.png<>uid://bfcsninpv2moq::::res://Assets/musics/main-theme02.ogg<>uid://djkhg0aitpf50::::res://Scenes/options menu/options_menu.tscn<>uid://b34ejlnfgxv5k::::res://Scenes/Debug/debug.tscn
+::res://Scenes/main menu/::1733113408
+main_menu.gd::GDScript::-1::1733082975::0::1::::MainMenu<>Control<>::
+main_menu.tscn::PackedScene::6587477498504628874::1733113408::0::1::::<><>::res://Scenes/main menu/main_menu.gd<>uid://b218l7yjt2ipe::::res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.png<>uid://bfcsninpv2moq::::res://Assets/musics/main-theme02.ogg<>uid://djkhg0aitpf50::::res://Scenes/options menu/options_menu.tscn<>uid://b34ejlnfgxv5k::::res://Scenes/Debug/debug.tscn
+::res://Scenes/mur/::1733113409
+mur.gd::GDScript::-1::1733113384::0::1::::<>Sprite2D<>::
+toast.tscn::PackedScene::8506320367361104478::1733113409::0::1::::<><>::uid://diylov0wvo4jg::::res://Assets/sprites_sheets/toast.png<>res://Scenes/mur/mur.gd
 ::res://Scenes/options menu/::1730166940
 audio_slider_settings.gd::GDScript::-1::1730158529::0::1::::<>Control<>::
 audio_slider_settings.tscn::PackedScene::6134902393217361359::1730165469::0::1::::<><>::res://Scenes/options menu/audio_slider_settings.gd
@@ -74,13 +84,18 @@ resolution_mode_button.gd::GDScript::-1::1730166940::0::1::::<>Control<>::
 resolution_mode_button.tscn::PackedScene::4638707892986928040::1730166867::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/resolution_mode_button.gd
 window_mode_button.gd::GDScript::-1::1730164359::0::1::::<>Control<>::
 window_mode_button.tscn::PackedScene::6901065297113682853::1730165468::0::1::::<><>::uid://syfl1fj30dky::::res://Scenes/options menu/options_display_button.tscn<>res://Scenes/options menu/window_mode_button.gd
-::res://Scenes/test_shader/::1732853688
+::res://Scenes/test_shader/::1733113409
 test_shader.gd::GDScript::-1::1730756099::0::1::::<>Sprite2D<>::
-test_shader.gdshader::Shader::-1::1732853688::0::1::::<><>::
+test_shader.gdshader::Shader::-1::1733113409::0::1::::<><>::
 test_shader.tscn::PackedScene::188186246710554657::1731454590::0::1::::<><>::res://Scenes/test_shader/test_shader.gdshader<>uid://dpka0au20lvl8::::res://icon.svg<>res://Scenes/test_shader/test_shader.gd
-::res://Scenes/UI/::1732853569
-health_bar.tscn::PackedScene::538162787975485662::1732853569::0::1::::<><>::uid://boxyekd0nje0g::::res://Assets/UI/ValueRed_120x8.png<>uid://btgxivl6hplty::::res://Assets/UI/ValueBar_128x16.png<>res://Scenes/UI/health_special_bars.gd<>uid://colyqmtbyech::::res://Assets/UI/CornerKnot_14x14.png<>uid://cdv3gyhdjiep::::res://Assets/UI/HealthBarPanel_160x41.png<>uid://cxkqyrkw5uxtw::::res://Assets/UI/BlackBigCircleBoxWithBorder_27x27.png<>uid://cle5i8154yd4x::::res://Assets/UI/HeartIcons_32x32.png<>uid://7yfcxfqcw4p3::::res://Assets/UI/ValueWhite_120x8.png<>uid://des42ywoqldvm::::res://Assets/UI/ValueBlue_120x8.png
+::res://Scenes/UI/::1733113408
+health_bar.tscn::PackedScene::538162787975485662::1733113408::0::1::::<><>::uid://boxyekd0nje0g::::res://Assets/UI/ValueRed_120x8.png<>uid://btgxivl6hplty::::res://Assets/UI/ValueBar_128x16.png<>res://Scenes/UI/health_special_bars.gd<>uid://colyqmtbyech::::res://Assets/UI/CornerKnot_14x14.png<>uid://cdv3gyhdjiep::::res://Assets/UI/HealthBarPanel_160x41.png<>uid://cxkqyrkw5uxtw::::res://Assets/UI/BlackBigCircleBoxWithBorder_27x27.png<>uid://cle5i8154yd4x::::res://Assets/UI/HeartIcons_32x32.png<>uid://7yfcxfqcw4p3::::res://Assets/UI/ValueWhite_120x8.png<>uid://des42ywoqldvm::::res://Assets/UI/ValueBlue_120x8.png
 health_special_bars.gd::GDScript::-1::1732207990::0::1::::<>Control<>::
-::res://Scenes/world_map/::1732853569
-world_map.tscn::PackedScene::8015238026861127654::1732853569::0::1::::<><>::uid://bitg6s866gu44::::res://Scenes/main character/main_character.tscn<>uid://di0jvl06u6pg::::res://Assets/musics/Conquest_loop.ogg<>uid://ngdl637oqhgv::::res://Assets/Tileset/Forest-Summer-Spring-spritesheet.png<>uid://mltbdilh6km4::::res://Scenes/for_testing/dummy.tscn<>res://Scenes/world_map/zone_fin.gd
-zone_fin.gd::GDScript::-1::1732852797::0::1::::<>Area2D<>::
+::res://Scenes/world_map/::1733113408
+world_map.tscn::PackedScene::8015238026861127654::1733113408::0::1::::<><>::uid://bitg6s866gu44::::res://Scenes/main character/main_character.tscn<>uid://di0jvl06u6pg::::res://Assets/musics/Conquest_loop.ogg<>uid://ngdl637oqhgv::::res://Assets/Tileset/Forest-Summer-Spring-spritesheet.png<>uid://mltbdilh6km4::::res://Scenes/for_testing/dummy.tscn<>uid://2a88w1gqa1lf::::res://Scenes/zone_patrouille/zone_patrouille.tscn<>res://Scenes/world_map/zone_fin.gd<>uid://bnvj6oxtita8b::::res://Scenes/zone_patrouille/zone_patrouille1.tscn<>uid://dbbijfbmvd0lj::::res://Scenes/zone_patrouille/zone_patrouille2.tscn
+zone_fin.gd::GDScript::-1::1733085783::0::1::::<>Area2D<>::
+::res://Scenes/zone_patrouille/::1733113408
+zone_patrouille1.tscn::PackedScene::3342830168100842523::1733113408::0::1::::<><>::res://Scenes/zone_patrouille/zone_patrouille.gd<>uid://l5ahdnqpjy43::::res://Scenes/collectibles/toast.tscn
+zone_patrouille2.tscn::PackedScene::7232017345293661579::1733111738::0::1::::<><>::res://Scenes/zone_patrouille/zone_patrouille.gd<>uid://l5ahdnqpjy43::::res://Scenes/collectibles/toast.tscn
+zone_patrouille.gd::GDScript::-1::1733109664::0::1::::<>Area2D<>::
+zone_patrouille.tscn::PackedScene::1897162566159671587::1733111678::0::1::::<><>::uid://l5ahdnqpjy43::::res://Scenes/collectibles/toast.tscn<>res://Scenes/zone_patrouille/zone_patrouille.gd

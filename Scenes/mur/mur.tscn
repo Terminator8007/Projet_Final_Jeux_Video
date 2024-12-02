@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtgr4a3kthkpq"]
+
+[ext_resource type="Texture2D" uid="uid://diylov0wvo4jg" path="res://Assets/sprites_sheets/toast.png" id="1_4bdl2"]
+[ext_resource type="Script" path="res://Scenes/mur/mur.gd" id="2_ssjnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30p2s"]
+size = Vector2(44, 30)
+
+[node name="mur" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_4bdl2")
+script = ExtResource("2_ssjnc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_30p2s")

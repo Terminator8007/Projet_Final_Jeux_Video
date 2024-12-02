@@ -11,3 +11,12 @@ res://Assets/Scripts/GLOBAL.gd
 res://Scenes/main character/main_character.gd
 res://Scenes/main menu/main_menu.gd
 res://Scenes/world_map/zone_fin.gd
+res://Scenes/collectibles/toast.gd
+res://Scenes/collectibles/toast.tscn
+res://Scenes/zone_patrouille/zone_patrouille.tscn
+res://Scenes/zone_patrouille/zone_patrouille.gd
+res://Scenes/for_testing/dummy.gd
+res://Scenes/zone_patrouille/zone_patrouille1.tscn
+res://Scenes/mur/toast.tscn
+res://Scenes/mur/mur.gd
+res://Scenes/mur/mur.tscn

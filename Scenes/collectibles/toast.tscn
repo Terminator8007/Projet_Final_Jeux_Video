@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://l5ahdnqpjy43"]
+
+[ext_resource type="Texture2D" uid="uid://diylov0wvo4jg" path="res://Assets/sprites_sheets/toast.png" id="1_g6u0k"]
+[ext_resource type="Script" path="res://Scenes/collectibles/toast.gd" id="2_2pu2n"]
+[ext_resource type="AudioStream" uid="uid://cokmr6r8y61hp" path="res://Assets/sfx/crunch.mp3" id="3_nm8yi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4g6x"]
+radius = 25.0799
+
+[node name="Toast" type="Sprite2D"]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_g6u0k")
+script = ExtResource("2_2pu2n")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_f4g6x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nm8yi")
+volume_db = 10.0
+pitch_scale = 1.2
+bus = &"Effets"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

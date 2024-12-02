@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Ennemis
 
 var health : int = 100
 @export var friction : float = 600.0  # Taux de ralentissement
@@ -17,6 +18,7 @@ var patrol_point_arrived: bool = false
 var look_at_point_stop: Vector2 = Vector2(0, 0)
 
 func _ready():
+	add_to_group("enemies")
 	damage = randi_range(3, 8)
 	patrol_wait_timer = $PatrolWaitTimer
 	

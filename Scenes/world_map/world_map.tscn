@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=4 uid="uid://dmgv2f7f43wne"]
+[gd_scene load_steps=13 format=4 uid="uid://dmgv2f7f43wne"]
 
 [ext_resource type="PackedScene" uid="uid://bitg6s866gu44" path="res://Scenes/main character/main_character.tscn" id="1_mkodx"]
 [ext_resource type="AudioStream" uid="uid://di0jvl06u6pg" path="res://Assets/musics/Conquest_loop.ogg" id="3_5syx1"]
 [ext_resource type="Texture2D" uid="uid://ngdl637oqhgv" path="res://Assets/Tileset/Forest-Summer-Spring-spritesheet.png" id="3_hd0en"]
 [ext_resource type="PackedScene" uid="uid://mltbdilh6km4" path="res://Scenes/for_testing/dummy.tscn" id="4_h8k6c"]
+[ext_resource type="PackedScene" uid="uid://2a88w1gqa1lf" path="res://Scenes/zone_patrouille/zone_patrouille.tscn" id="5_qbn2q"]
 [ext_resource type="Script" path="res://Scenes/world_map/zone_fin.gd" id="5_vi145"]
+[ext_resource type="PackedScene" uid="uid://bnvj6oxtita8b" path="res://Scenes/zone_patrouille/zone_patrouille1.tscn" id="7_m5lgu"]
+[ext_resource type="PackedScene" uid="uid://dbbijfbmvd0lj" path="res://Scenes/zone_patrouille/zone_patrouille2.tscn" id="8_vkcwj"]
+[ext_resource type="PackedScene" uid="uid://dtgr4a3kthkpq" path="res://Scenes/mur/mur.tscn" id="9_ysvry"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7dgq"]
 texture = ExtResource("3_hd0en")
@@ -961,9 +965,6 @@ terrain_set_0/terrain_1/name = "coline"
 terrain_set_0/terrain_1/color = Color(0.351743, 0.493241, 0.181578, 1)
 sources/0 = SubResource("TileSetAtlasSource_x7dgq")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8m7v"]
-size = Vector2(489, 271)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2hsg"]
 size = Vector2(170, 229)
 
@@ -1006,38 +1007,34 @@ enabled = false
 
 [node name="CharacterBody2D8" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-549, -371)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D9" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-556, -350)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D10" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-581, -343)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D11" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-598, -357)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D12" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-603, -378)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D13" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-586, -397)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
 [node name="CharacterBody2D7" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-561, -396)
-patrol_area = NodePath("../Area2D")
+patrol_area = NodePath("../zone_patrouille")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-611, -395)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-z_index = 1
-shape = SubResource("RectangleShape2D_t8m7v")
+[node name="zone_patrouille" parent="." instance=ExtResource("5_qbn2q")]
+position = Vector2(-607, -392)
 
 [node name="ZoneFin" type="Area2D" parent="."]
 position = Vector2(2677, -807)
@@ -1047,4 +1044,88 @@ script = ExtResource("5_vi145")
 position = Vector2(9, -87.5)
 shape = SubResource("RectangleShape2D_r2hsg")
 
+[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(2180, 758)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D2" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(2151, 713)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D3" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(2089, 817)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D4" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(2346, 630)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D5" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(1979, 561)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D6" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(1992, 925)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="CharacterBody2D14" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(2417, 913)
+patrol_area = NodePath("../zone_patrouille2")
+
+[node name="zone_patrouille2" parent="." instance=ExtResource("7_m5lgu")]
+position = Vector2(2262, 729)
+
+[node name="CollisionShape2D" parent="zone_patrouille2" index="1"]
+position = Vector2(13, 6.5)
+
+[node name="CharacterBody2D15" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(936, -63)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D16" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(657, -235)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D17" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(989, -213)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D18" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(1238, -132)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D19" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(1209, 23)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D20" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(576, 8)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D21" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(791, -25)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="CharacterBody2D22" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
+position = Vector2(1217, -230)
+patrol_area = NodePath("../zone_patrouille3")
+
+[node name="zone_patrouille3" parent="." instance=ExtResource("8_vkcwj")]
+position = Vector2(837, -143)
+
+[node name="CollisionShape2D" parent="zone_patrouille3" index="1"]
+position = Vector2(138.5, 24.875)
+
+[node name="mur" parent="." instance=ExtResource("9_ysvry")]
+position = Vector2(2638, -758)
+
+[node name="mur2" parent="." instance=ExtResource("9_ysvry")]
+position = Vector2(2678, -764)
+
+[node name="mur3" parent="." instance=ExtResource("9_ysvry")]
+position = Vector2(2719, -758)
+
 [connection signal="body_entered" from="ZoneFin" to="ZoneFin" method="_on_body_entered"]
+
+[editable path="zone_patrouille2"]
+[editable path="zone_patrouille3"]

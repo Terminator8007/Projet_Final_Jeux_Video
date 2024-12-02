@@ -28,6 +28,7 @@ var player_alive: bool = true
 @export var start_level: PackedScene = preload("res://Scenes/world_map/world_map.tscn")
 @export var end_scene: PackedScene = preload("res://Scenes/fin/scene_fin.tscn")
 @export var main_menu_scene: PackedScene = preload("res://Scenes/main menu/main_menu.tscn")
+var toast_cellecter: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
