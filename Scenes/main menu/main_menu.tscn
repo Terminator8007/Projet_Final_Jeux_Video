@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c04a16rd2lgf7"]
+[gd_scene load_steps=10 format=3 uid="uid://c04a16rd2lgf7"]
 
 [ext_resource type="Script" path="res://Scenes/main menu/main_menu.gd" id="1_hvwvr"]
 [ext_resource type="Texture2D" uid="uid://b218l7yjt2ipe" path="res://Assets/images/DALL·E 2024-10-27 15.04.25 - main menu background.png" id="2_tqciv"]
 [ext_resource type="AudioStream" uid="uid://bfcsninpv2moq" path="res://Assets/musics/main-theme02.ogg" id="3_8hj2w"]
 [ext_resource type="PackedScene" uid="uid://djkhg0aitpf50" path="res://Scenes/options menu/options_menu.tscn" id="3_v8jdg"]
+[ext_resource type="PackedScene" uid="uid://d1x377xox3upj" path="res://Scenes/instructions menu/instructions_menu.tscn" id="4_84pun"]
 [ext_resource type="PackedScene" uid="uid://b34ejlnfgxv5k" path="res://Scenes/Debug/debug.tscn" id="4_uysm0"]
 
 [sub_resource type="SystemFont" id="SystemFont_wh77g"]
@@ -90,15 +91,27 @@ text = "Jouer"
 [node name="Options_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../Quitter_Button")
+focus_neighbor_top = NodePath("../Play_Button")
+focus_neighbor_bottom = NodePath("../Instructions_Button")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = SubResource("SystemFont_ifbra")
 theme_override_font_sizes/font_size = 24
 text = "Options"
 
+[node name="Instructions_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Options_Button")
+focus_neighbor_bottom = NodePath("../Quitter_Button")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_ifbra")
+theme_override_font_sizes/font_size = 24
+text = "Instructions"
+
 [node name="Quitter_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+focus_neighbor_top = NodePath("../Instructions_Button")
 focus_neighbor_bottom = NodePath("../Play_Button")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = SubResource("SystemFont_ifbra")
@@ -107,6 +120,10 @@ text = "Quitter
 "
 
 [node name="Options_Menu" parent="." instance=ExtResource("3_v8jdg")]
+visible = false
+layout_mode = 1
+
+[node name="InstructionsMenu" parent="." instance=ExtResource("4_84pun")]
 visible = false
 layout_mode = 1
 

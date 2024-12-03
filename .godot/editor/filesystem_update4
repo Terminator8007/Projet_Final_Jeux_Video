@@ -1,22 +1,10 @@
-res://Scenes/fin/scene_fin.tscn
-res://Scenes/test_shader/test_shader.gdshader
-res://Scenes/fin/scene_fin.gd
-res://Scenes/main character/main_character.tscn
-res://Scenes/world_map/world_map.tscn
-res://Scenes/for_testing/dummy.tscn
-res://Scenes/UI/health_bar.tscn
-res://Scenes/Debug/debug.tscn
 res://Scenes/main menu/main_menu.tscn
-res://Assets/Scripts/GLOBAL.gd
-res://Scenes/main character/main_character.gd
+res://Scenes/test_shader/test_shader.gdshader
 res://Scenes/main menu/main_menu.gd
-res://Scenes/world_map/zone_fin.gd
-res://Scenes/collectibles/toast.gd
-res://Scenes/collectibles/toast.tscn
-res://Scenes/zone_patrouille/zone_patrouille.tscn
-res://Scenes/zone_patrouille/zone_patrouille.gd
-res://Scenes/for_testing/dummy.gd
-res://Scenes/zone_patrouille/zone_patrouille1.tscn
-res://Scenes/mur/toast.tscn
-res://Scenes/mur/mur.gd
-res://Scenes/mur/mur.tscn
+res://Scenes/instructions menu/instructions_menu.tscn
+res://Scenes/instructions menu/instructions_menu.gd
+res://Scenes/options menu/options_menu.tscn
+res://Scenes/options menu/options_tab_container.tscn
+res://Assets/Scripts/GLOBAL.gd
+res://Scenes/options menu/options_menu.gd
+res://Scenes/options menu/options_tab_container.gd

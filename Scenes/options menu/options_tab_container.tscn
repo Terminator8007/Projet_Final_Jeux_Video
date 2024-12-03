@@ -7,6 +7,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_blisv"]
 font_names = PackedStringArray("Papyrus")
+subpixel_positioning = 0
 
 [node name="Options_Tab_Container" type="Control"]
 layout_mode = 3

@@ -1,7 +1,7 @@
 class_name OptionsTabContainer
 extends Control
 
-@onready var tab_container = $TabContainer as TabContainer
+@onready var tab_container: TabContainer = $TabContainer 
 
 signal Exit_Options_menu
 
