@@ -1001,10 +1001,6 @@ stream = ExtResource("3_5syx1")
 autoplay = true
 bus = &"Musique"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-586, -333)
-enabled = false
-
 [node name="CharacterBody2D8" parent="." node_paths=PackedStringArray("patrol_area") instance=ExtResource("4_h8k6c")]
 position = Vector2(-549, -371)
 patrol_area = NodePath("../zone_patrouille")
@@ -1114,7 +1110,7 @@ patrol_area = NodePath("../zone_patrouille3")
 position = Vector2(837, -143)
 
 [node name="CollisionShape2D" parent="zone_patrouille3" index="1"]
-position = Vector2(138.5, 24.875)
+position = Vector2(161, 44)
 
 [node name="mur" parent="." instance=ExtResource("9_ysvry")]
 position = Vector2(2638, -758)
@@ -1124,6 +1120,11 @@ position = Vector2(2678, -764)
 
 [node name="mur3" parent="." instance=ExtResource("9_ysvry")]
 position = Vector2(2719, -758)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(-590, -380)
+enabled = false
+zoom = Vector2(1.8, 1.8)
 
 [connection signal="body_entered" from="ZoneFin" to="ZoneFin" method="_on_body_entered"]
 

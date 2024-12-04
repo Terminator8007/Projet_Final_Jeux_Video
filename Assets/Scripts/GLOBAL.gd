@@ -40,7 +40,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(InputEventAction)
 	manage_input()
 
 func is_on_arcade() -> bool:

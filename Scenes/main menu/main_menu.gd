@@ -22,13 +22,11 @@ func on_option_pressed() -> void:
 	options_menu.visible = true
 
 func on_instruction_pressed() -> void:
-	print('instruction_pressed')
 	margin_container.visible = false
 	instructions_menu.set_process(true)
 	instructions_menu.visible = true
 
 func on_exit_instruction_menu() -> void:
-	print('instruction exit')
 	margin_container.visible = true
 	instructions_menu.visible = false
 	instructions_menu.set_process(false)

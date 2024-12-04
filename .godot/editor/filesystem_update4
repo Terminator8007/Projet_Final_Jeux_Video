@@ -8,3 +8,5 @@ res://Scenes/options menu/options_tab_container.tscn
 res://Assets/Scripts/GLOBAL.gd
 res://Scenes/options menu/options_menu.gd
 res://Scenes/options menu/options_tab_container.gd
+res://Scenes/world_map/world_map.tscn
+res://Scenes/main character/main_character.tscn

@@ -12,6 +12,5 @@ func _ready():
 	set_process(false)
 
 func on_exit_pressed() -> void:
-	print('exit_press_option')
 	exit_options_menu.emit()
 	set_process(false)
